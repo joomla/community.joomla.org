@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Donors list">
+		<message>
+			Display list of donors
+		</message>
+	</layout>
+	<state>
+		<name>Donors List</name>
+		<description>Display list of donors</description>		
+		<fields name="params">
+			<fieldset name="basic" label="Donors List options"
+				addfieldpath="/administrator/components/com_jdonation/elements">
+				<field name="cid" type="campaign" size="3" default="0" label="Choose campaign" description="Choose the campaign which users will donate for"></field>
+				<field name="order_by" type="list" default="created_date" label="Ordering" description="Order donors by">
+					<option value="first_name">First Name</option>
+					<option value="last_name">Last Name</option>
+					<option value="amount">Donation Amount</option>
+					<option value="created_date">Date</option>
+				</field>
+				<field name="order_direction" type="list" default="DESC" label="Direction" description="Order Direction">
+					<option value="ASC">ASC</option>
+					<option value="DESC">DESC</option>				
+				</field>
+				<field name="owncampaigns" class="btn-group" type="radio" default="0" label="Show Own campaigns donors" description="Do you want to show donors list of current user's campaigns">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>					
+	</state>
+</metadata>
