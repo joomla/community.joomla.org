@@ -1,0 +1,5 @@
+# Disable the CSP's for the backend
+<IfModule mod_headers.c>
+	Header always set Content-Security-Policy-Report-Only ""
+	Header always set Content-Security-Policy ""
+</IfModule>
