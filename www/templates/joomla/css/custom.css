@@ -329,33 +329,6 @@ body.site{background-color:#fff;}
 input.search-query:focus{box-shadow:none; border:1px solid #ccc;}
 li#item-135, li#item-136, li#item-182,li#item-340, li#item-341, li#item-348, li#item-349, li#item-350, li#item-352, li#item-353, li#item-426, li#item-427, li#item-327,li#item-428, li#item-427, li#item-464, li#item-463 {float:right;}
 
-/*Chronoforms Tweaks*/
-p.chrono_credits {display: none;}
-form#chronoform-ShopContactForm {width: 100%;margin: 0 auto!important;}
-form#chronoform-ShopContactForm input,form#chronoform-ShopContactForm textarea{border-radius:0px; line-height:30px; height:30px; background-color:#eee; border:1px solid #eee; box-shadow:none;}
-form#chronoform-ShopContactForm select{height:40px; width:78%}
-form#chronoform-ShopContactForm input#ContSubmit {margin-left:20%}
-form#chronoform-ShopContactForm input, form#chronoform-ShopContactForm textarea {width: 77%;}
-label.gcore-label-left.required_label {float: left; display: inline-block; width: 20%;}
-form#chronoform-ShopContactForm .formHorizontal .formControls {margin-left: 0;}
-.gcore-line-tr.gcore-form-row {margin-bottom: 18px;}
-form#chronoform-ShopContactForm .formHorizontal .formControlLabel {float: left; padding-top: 5px; text-align: left; width: 15%;}
-#g-recaptcha-23,#g-recaptcha-31,#g-recaptcha-41{margin-left:15%;}
-form#chronoform-ShopContactForm input[type="text"], form#chronoform-ShopContactForm input[type="number"], form#chronoform-ShopContactForm input[type="email"], form#chronoform-ShopContactForm input[type="tel"], form#chronoform-ShopContactForm input[type="url"], form#chronoform-ShopContactForm input[type="password"] {}
-form#chronoform-ShopContactForm textarea{height: auto; border-radius:0px; background-color:#eee; border:1px solid #eee; box-shadow:none;}
-form#chronoform-ShopContactForm input[type="submit"] {background-color: #1b63a2; background-image: none; border-color: #1b63a2; border-radius: 0; box-shadow: none; padding: 7px 60px; text-shadow: none; height:40px; width:auto;}
-form#chronoform-ShopContactForm input[type="submit"]:hover {background-color: #103b60;}
-form#chronoform-ShopContactForm .formHorizontal p.formDescription {margin-left:15%;}
-form#chronoform-ShopContactForm input[type="reset"] {background-color: #aaa; background-image: none; border-color: #aaa; border-radius: 0; box-shadow: none; padding: 7px 60px; text-shadow: none; width:auto; height:40px;}
-div#ftr-ContSubmit {display: inline-block; margin: 0 20px 0 17%;}
-div#ftr-button12 {display: inline-block; padding-left: 20px;}
-form#chronoform-ShopContactForm input[type="reset"]:hover {background-color: #777;}
-strong.formRequired {font-weight: normal;}
-form#chronoform-ShopContactForm textarea{height: auto;}
-form#chronoform-ForumUnBan input{width: 100%;max-width: 300px;padding:10px;}
-form#chronoform-ForumUnBan textarea#ForumMessage {width: 100%;max-width: 300px;height: 250px;padding:10px;}
-form#chronoform-ForumUnBan input#ForumSubmit {width: 300px;max-width: 300px;}
-/*.g-recaptcha {margin-left: 20%;}*/
 /*Modules & Layouts*/
 aside .nav .nav-child {padding: 5px 5px 5px 20px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
 aside .small {font-size:12px;}
@@ -729,7 +702,7 @@ input#modlgn-username,input#modlgn-passwd {width: 85%;}
 div#aside {padding-top: 15px;}
 .btn-large {font-size:14px; padding:10px 10px;}
 .report-listing {width: 82%;}
-div#ftr-ContSubmit {margin: 0px 20px 0 15%;}
+/*div#ftr-ContSubmit {margin: 0px 20px 0 15%;}*/
 }
 @media only screen and (min-width: 768px) and (max-width: 979px){
 #userForm.formResponsive input[type="text"],.formResponsive textarea {width: 97%;}
@@ -780,7 +753,7 @@ div#field_your_photo-input-container {display: block;margin-left: 0px;}
 .itemid-273 .submit-captcha {margin-left: 0px;}
 .itemid-273 .g-recaptcha {margin-left:0px; margin-bottom:20px;}
 div#field_terms {width: 100%;}
-div#ftr-ContSubmit {margin: 0px 20px 0 13}
+/*div#ftr-ContSubmit {margin: 0px 20px 0 13}*/
 .SobiPro .spCalDayHead .navbar-inner { color: #000;}
 .spCalDayHead ul.nav {padding-top: 10px;}
 .SpCalEntry {padding: 10px 0px;}
@@ -809,11 +782,6 @@ span.spEntryCount {display: block;}
 @media (max-width:680px){
 .subnav-wrapper .subnav .container{width:70%;box-sizing:border-box;margin:0;position:relative;display:inline-block;padding:0;float:left;}
 }
-@media (max-width:600px) {
-label.gcore-label-left.required_label {float: none;width: 100%;}
-form#chronoform-ShopContactForm input, form#chronoform-ShopContactForm textarea {width: 100%;}
-form#chronoform-ShopContactForm select {width: 104%;}
-}
 @media only screen and (max-width: 480px){
 .nav-pills > li.item-199,  .nav-pills > li.item-192 {float: left;}
 .nav > li > a > img,.bannergm{display: none;}
@@ -824,18 +792,16 @@ form#chronoform-ShopContactForm select {width: 104%;}
 .span9.spCatname {padding-left:0px;}
 span.spEntryCount {display: block;}
 li.item-136, li.item-426 {display: none;}
-div#ftr-ContSubmit {margin: 0 0 0 0;}
-form#chronoform-ShopContactForm input#ContSubmit {margin-left: 0;}
-div#ftr-button12 {padding-left: 10px;}
+/*div#ftr-ContSubmit {margin: 0 0 0 0;}
+div#ftr-button12 {padding-left: 10px;}*/
 .g-recaptcha {margin-left: 0px;}
 .SobiPro .mapOr {text-align: center;display: block;}
 .SobiPro .ctrl-map.label,.SobiPro .ctrl-locate-me.btn {padding-right: 0;padding-left: 0;}
 .SobiPro .mapSearch,.SobiPro .ctrl-map,.SobiPro .ctrl-locate-me.btn {width: 100%;}
 }
 @media only screen and (max-width:425px) {
-div#ftr-ContSubmit, div#ftr-button12 {display:block; margin-bottom:20px;}
-form#chronoform-ShopContactForm input#ContSubmit, form#chronoform-ShopContactForm input#button12{width:100%;}
-div#ftr-button12 {padding-left:0px;}
+/*div#ftr-ContSubmit, div#ftr-button12 {display:block; margin-bottom:20px;}
+div#ftr-button12 {padding-left:0px;}*/
 }
 @media only screen and (max-width: 380px){
 .g-recaptcha {-webkit-transform:scale(0.77);transform:scale(0.77);-webkit-transform-origin:0 0;transform-origin:0 0;}
