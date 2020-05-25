@@ -137,7 +137,6 @@ iframe,svg{max-width:inherit}
 .SobiPro .editor{overflow: visible}
 .SobiPro .spClassEditInfo{margin-top: 10px}
 .SobiPro .spEntryEdit .popover-title{color: #a30000;font-size: 17px;font-weight: 400}
-.SobiPro .spEntryEdit .popover-title::before{font-family: FontAwesome;content: "ïƒ«";padding-right: 5px}
 .SobiPro .spFieldEmailLabel,.SobiPro .spFieldUrlLabel{margin-bottom: 5px}
 .SobiPro .spFieldUrl input{width: -moz-calc(100% - 113px);width: -webkit-calc(100% - 113px);width: -o-calc(100% - 113px);width: calc(100% - 113px)}
 .SobiPro .spFieldUrl select,.SobiPro .spFieldUrl .input-prepend{width: 100%}
