@@ -371,7 +371,6 @@ div#field_location-container {clear: both;}
 div#field_your_photo-input-container {display: inline-block;margin-left: 20px;}
 .itemid-273 .SobiPro .spEntryEdit .required-message {margin-left: 220px!important;}
 .itemid-273 .submit-captcha {margin-left: 220px;}
-.itemid-273 .g-recaptcha {margin-left:0px; margin-bottom:20px;}
 div#field_terms {width: 60%;}
 input#field_terms_terms-yes {width: 14px;}
 /*Events Sobi Tweaks*/
@@ -424,7 +423,6 @@ th.event-num {width: 4%;}
 th.event-web {width: 15%;}
 /*Mascot*/
 .itemid-634 .spEntryEdit label.control-label {  float: none;  padding-top: 10px;  margin-left: 0px;  text-align: left;  width: 100%;}
-.itemid-634 .g-recaptcha {margin-left:0px;}
 .itemid-635 .spClassViewImage { display: inline-block; width: 31%; padding-right:2%}
 /*Page title*/
 .page-title{font-family: 'Open Sans', sans-serif;}
@@ -635,7 +633,6 @@ div#aside {padding-top: 15px;}
 }
 @media only screen and (min-width: 768px) and (max-width: 979px){
 #userForm.formResponsive input[type="text"],.formResponsive textarea {width: 97%;}
-#g-recaptcha-23, #g-recaptcha-31,#g-recaptcha-41 {margin-left: 0;}
 input#modlgn-username, input#modlgn-passwd {width: 80%!important;}
 form#login-form ul.unstyled {font-size: 12px;}
 .span12.spCaticon h3 {font-size: 13px;font-weight: 400;}
@@ -655,7 +652,6 @@ form#login-form ul.unstyled {font-size: 12px;}
 div#field_your_photo-input-container {display: block;margin-left: 0px;}
 .itemid-273 .SobiPro .spEntryEdit .required-message {margin-left: 0px!important;}
 .itemid-273 .submit-captcha {margin-left: 0px;}
-.itemid-273 .g-recaptcha {margin-left:0px; margin-bottom:20px;}
 div#field_terms {width: 100%;}
 /*div#ftr-ContSubmit {margin: 0px 20px 0 13}*/
 .SobiPro .spCalDayHead .navbar-inner { color: #000;}
@@ -676,7 +672,6 @@ div#sa_ads6 {
 }
 @media only screen and (min-width: 481px) and (max-width: 767px){
 .nav-tabs > li,  li#item-199, .nav-tabs > li, .nav-pills > li.item-192 {float: left;}
-#g-recaptcha-23,#g-recaptcha-31, #g-recaptcha-41 {margin-left: 0;}
 .itemid-200 .span3{float: left; margin-right: 1%; width: 48%;}
 .nav-pills > li > a {padding-left: 8px; padding-right: 8px;}
 .span3.spCat {width: 48%!important;float: left!important;}
@@ -689,7 +684,6 @@ span.spEntryCount {display: block;}
 @media only screen and (max-width: 480px){
 .nav-pills > li.item-199,  .nav-pills > li.item-192 {float: left;}
 .nav > li > a > img,.bannergm{display: none;}
-#g-recaptcha-23, #g-recaptcha-31,#g-recaptcha-41{margin-left:-25px; -webkit-transform:scale(0.70); -ms-transform:scale(0.70); transform:scale(0.70);}
  .bannerpm{display:block; margin-top:30px;}
 .nav-pills > li > a {padding-left: 8px; padding-right: 8px;}
 .span3.spCat {width: 48%!important;float: left!important;}
@@ -698,7 +692,6 @@ span.spEntryCount {display: block;}
 li.item-136, li.item-426 {display: none;}
 /*div#ftr-ContSubmit {margin: 0 0 0 0;}
 div#ftr-button12 {padding-left: 10px;}*/
-.g-recaptcha {margin-left: 0px;}
 .SobiPro .mapOr {text-align: center;display: block;}
 .SobiPro .ctrl-map.label,.SobiPro .ctrl-locate-me.btn {padding-right: 0;padding-left: 0;}
 .SobiPro .mapSearch,.SobiPro .ctrl-map,.SobiPro .ctrl-locate-me.btn {width: 100%;}
@@ -706,9 +699,6 @@ div#ftr-button12 {padding-left: 10px;}*/
 @media only screen and (max-width:425px) {
 /*div#ftr-ContSubmit, div#ftr-button12 {display:block; margin-bottom:20px;}
 div#ftr-button12 {padding-left:0px;}*/
-}
-@media only screen and (max-width: 380px){
-.g-recaptcha {-webkit-transform:scale(0.77);transform:scale(0.77);-webkit-transform-origin:0 0;transform-origin:0 0;}
 }
 
 /* Mod_Menu Styling - Added 2020-07-13*/
