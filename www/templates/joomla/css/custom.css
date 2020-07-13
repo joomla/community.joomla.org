@@ -809,3 +809,23 @@ div#ftr-button12 {padding-left:0px;}*/
 @media only screen and (max-width: 380px){
 .g-recaptcha {-webkit-transform:scale(0.77);transform:scale(0.77);-webkit-transform-origin:0 0;transform-origin:0 0;}
 }
+
+/* Mod_Menu Styling - Added 2020-07-13*/
+.subnav .nav-pills {
+	float: left;
+  }
+  .subnav .nav-pills .dropdown-menu {
+	left: -1px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0 0 0 #999;
+	-moz-box-shadow: 0 0 0 #999;
+	box-shadow: 0 0 0 #999;
+	margin-top: -2px;
+	border-top: 0;
+  }
+  
+  nav.subnav-wrapper li.dropdown.parent:hover > ul.dropdown-menu {
+	display:block
+  }
