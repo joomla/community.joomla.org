@@ -629,7 +629,6 @@ input#modlgn-username,input#modlgn-passwd {width: 85%;}
 div#aside {padding-top: 15px;}
 .btn-large {font-size:14px; padding:10px 10px;}
 .report-listing {width: 82%;}
-/*div#ftr-ContSubmit {margin: 0px 20px 0 15%;}*/
 }
 @media only screen and (min-width: 768px) and (max-width: 979px){
 #userForm.formResponsive input[type="text"],.formResponsive textarea {width: 97%;}
@@ -653,7 +652,6 @@ div#field_your_photo-input-container {display: block;margin-left: 0px;}
 .itemid-273 .SobiPro .spEntryEdit .required-message {margin-left: 0px!important;}
 .itemid-273 .submit-captcha {margin-left: 0px;}
 div#field_terms {width: 100%;}
-/*div#ftr-ContSubmit {margin: 0px 20px 0 13}*/
 .SobiPro .spCalDayHead .navbar-inner { color: #000;}
 .spCalDayHead ul.nav {padding-top: 10px;}
 .SpCalEntry {padding: 10px 0px;}
@@ -662,14 +660,7 @@ span.label.label-info {font-size: 16px;font-weight: normal;padding: 0px 30px 10p
 .SpCalEntry ul {list-style-type: none;}
 a.btn.button.bigorange {margin-bottom: 10px;}
 }
-.custom.ad-respond {
-    width: 350px;
-    height: 310px;
-}
 
-div#sa_ads6 {
-    height: 300px;
-}
 @media only screen and (min-width: 481px) and (max-width: 767px){
 .nav-tabs > li,  li#item-199, .nav-tabs > li, .nav-pills > li.item-192 {float: left;}
 .itemid-200 .span3{float: left; margin-right: 1%; width: 48%;}
@@ -678,9 +669,6 @@ div#sa_ads6 {
 .span9.spCatname {padding-left:0px;}
 span.spEntryCount {display: block;}
 }
-/*@media (max-width:680px){
-.subnav-wrapper .subnav .container{width:70%;box-sizing:border-box;margin:0;position:relative;display:inline-block;padding:0;float:left;}
-}*/
 @media only screen and (max-width: 480px){
 .nav-pills > li.item-199,  .nav-pills > li.item-192 {float: left;}
 .nav > li > a > img,.bannergm{display: none;}
@@ -690,16 +678,13 @@ span.spEntryCount {display: block;}
 .span9.spCatname {padding-left:0px;}
 span.spEntryCount {display: block;}
 li.item-136, li.item-426 {display: none;}
-/*div#ftr-ContSubmit {margin: 0 0 0 0;}
-div#ftr-button12 {padding-left: 10px;}*/
 .SobiPro .mapOr {text-align: center;display: block;}
 .SobiPro .ctrl-map.label,.SobiPro .ctrl-locate-me.btn {padding-right: 0;padding-left: 0;}
 .SobiPro .mapSearch,.SobiPro .ctrl-map,.SobiPro .ctrl-locate-me.btn {width: 100%;}
 }
-@media only screen and (max-width:425px) {
-/*div#ftr-ContSubmit, div#ftr-button12 {display:block; margin-bottom:20px;}
-div#ftr-button12 {padding-left:0px;}*/
-}
+/* Ads joomla org */
+.custom.ad-respond {width: 350px;height: 310px;}
+div#sa_ads6 {height: 300px;}
 
 /* Mod_Menu Styling - Added 2020-07-13*/
 .subnav .nav-pills {
