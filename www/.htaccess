@@ -1,9 +1,49 @@
+##
+# @copyright  Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+# @license    GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+###########################################
+# ======= Enable the Rewrite Engine =======
 RewriteEngine On
+###########################################
 
+###########################################
+# === File execution order ===
+DirectoryIndex index.php index.html
+###########################################
+
+###########################################
+# ========= No directory listings =========
+IndexIgnore *
+Options +FollowSymLinks
+Options -Indexes
+###########################################
+
+###########################################
+# ==== Redirect all requests to HTTPS =====
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+###########################################
+
+###########################################
+# ========== Special redirects ===========
+##### Redirect www to non-www -- BEGIN
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R,L]
+##### Redirect www to non-www -- END
+
+##### Redirect index.php to / -- BEGIN
+RewriteCond %{THE_REQUEST} !^POST
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteCond %{SERVER_PORT}>s ^(443>(s)|[0-9]+>s)$
+RewriteRule ^index\.php$ http%2://%{HTTP_HOST}/ [R,L]
+##### Redirect index.php to / -- END
+
+###########################################
+# ========== Add redirects here ===========
 Redirect 301 /sitemap.xml https://community.joomla.org/index.php?option=com_jmap&view=sitemap&format=xml
-
-RewriteBase /
-DirectorySlash Off
 
 RewriteRule ^blogs/community/[0-9]{1,6}-(.*)$ https://community.joomla.org/blogs/community/$1 [L,R=301]
 RewriteRule ^blogs/leadership/[0-9]{1,6}-(.*)$ https://community.joomla.org/blogs/leadership/$1 [L,R=301]
@@ -32,8 +72,8 @@ RewriteRule ^translations/joomla-2-5-translations/[0-9]{1,6}-(.*)$ https://commu
 RewriteRule ^translations/joomla-3-translations/[0-9]{1,6}-(.*)$ https://community.joomla.org/translations/joomla-3-translations/$1 [L,R=301]
 RewriteRule index\.php\.html index.php [NC,R]
 
-#Historical Bulk Redirects#
 
+#Historical Bulk Redirects#
 RewriteRule ^component/planet(.*) /connect.html? [R=301,L]
 RewriteRule ^connect/(.*) /connect.html? [R=301,L]
 RewriteRule ^user-groups/search-by(.*) /user-groups/find-a-user-group.html? [R=301,L]
@@ -72,370 +112,480 @@ RewriteRule (.*)  /$1? [R=301,L]
 RewriteRule ^viewtopic(.*) https://forum.joomla.org [R=301,NC,L]
 RewriteRule ^memberlist(.*) https://forum.joomla.org [R=301,NC,L]
 RewriteRule ^viewforum(.*) https://forum.joomla.org [R=301,NC,L]
+###########################################
 
-#Rochen Implemented Blocks
-#Bad bots (~10-15 hits/sec.)
-RewriteCond %{HTTP:X-FORWARDED-FOR} ^85\.95\.246\.57$ [OR]
-RewriteCond %{HTTP:X-FORWARDED-FOR} ^95\.174\.18\.106$ [OR]
-RewriteCond %{HTTP:X-FORWARDED-FOR} ^66\.96\.183\.20$ [OR]
-RewriteCond %{HTTP:X-FORWARDED-FOR} ^70\.86\.5\.74$
-RewriteRule .* - [F]
-#End Rochen Implemented Blocks
-
-##### File execution order -- BEGIN
-DirectoryIndex index.php index.html
-##### File execution order -- END
-##### No directory listings -- BEGIN
-IndexIgnore *
-Options -Indexes
-##### No directory listings -- END
-
-##### Optimal default expiration time - BEGIN
+###########################################
+# === Optimal default expiration time ===
 <IfModule mod_expires.c>
-# Enable expiration control
-ExpiresActive On
-# Default expiration: 1 hour after request
-#ExpiresDefault "now plus 1 hour"
-# CSS and JS expiration: 1 week after request
-ExpiresByType text/css "now plus 1 week"
-ExpiresByType application/javascript "now plus 1 week"
-ExpiresByType application/x-javascript "now plus 1 week"
-# Image files expiration: 1 month after request
-ExpiresByType image/bmp "now plus 1 month"
-ExpiresByType image/gif "now plus 1 month"
-ExpiresByType image/jpeg "now plus 1 month"
-ExpiresByType image/jp2 "now plus 1 month"
-ExpiresByType image/pipeg "now plus 1 month"
-ExpiresByType image/png "now plus 1 month"
-ExpiresByType image/svg+xml "now plus 1 month"
-ExpiresByType image/tiff "now plus 1 month"
-ExpiresByType image/vnd.microsoft.icon "now plus 1 month"
-ExpiresByType image/x-icon "now plus 1 month"
-ExpiresByType image/ico "now plus 1 month"
-ExpiresByType image/icon "now plus 1 month"
-ExpiresByType text/ico "now plus 1 month"
-ExpiresByType application/ico "now plus 1 month"
-ExpiresByType image/vnd.wap.wbmp "now plus 1 month"
-ExpiresByType application/vnd.wap.wbxml "now plus 1 month"
-ExpiresByType application/smil "now plus 1 month"
-# Audio files expiration: 1 month after request
-ExpiresByType audio/ogg "now plus 1 month"
-ExpiresByType application/ogg "now plus 1 month"
-ExpiresByType audio/basic "now plus 1 month"
-ExpiresByType audio/mid "now plus 1 month"
-ExpiresByType audio/midi "now plus 1 month"
-ExpiresByType audio/mpeg "now plus 1 month"
-ExpiresByType audio/mp3 "now plus 1 month"
-ExpiresByType audio/x-aiff "now plus 1 month"
-ExpiresByType audio/x-mpegurl "now plus 1 month"
-ExpiresByType audio/x-pn-realaudio "now plus 1 month"
-ExpiresByType audio/x-wav "now plus 1 month"
-# Movie files expiration: 1 month after request
-ExpiresByType application/x-shockwave-flash "now plus 1 month"
-ExpiresByType x-world/x-vrml "now plus 1 month"
-ExpiresByType video/x-msvideo "now plus 1 month"
-ExpiresByType video/mpeg "now plus 1 month"
-ExpiresByType video/mp4 "now plus 1 month"
-ExpiresByType video/quicktime "now plus 1 month"
-ExpiresByType video/x-la-asf "now plus 1 month"
-ExpiresByType video/x-ms-asf "now plus 1 month"
-</IfModule>
-##### Optimal default expiration time - END
+	# Enable expiration control
+	ExpiresActive On
 
-##### Common hacking tools and bandwidth hoggers block -- BEGIN
-SetEnvIf user-agent "WebBandit" stayout=1
-SetEnvIf user-agent "webbandit" stayout=1
-SetEnvIf user-agent "Acunetix" stayout=1
-SetEnvIf user-agent "binlar" stayout=1
-SetEnvIf user-agent "BlackWidow" stayout=1
-SetEnvIf user-agent "Bolt 0" stayout=1
-SetEnvIf user-agent "Bot mailto:craftbot@yahoo.com" stayout=1
-SetEnvIf user-agent "BOT for JCE" stayout=1
-SetEnvIf user-agent "casper" stayout=1
-SetEnvIf user-agent "checkprivacy" stayout=1
-SetEnvIf user-agent "ChinaClaw" stayout=1
-SetEnvIf user-agent "clshttp" stayout=1
-SetEnvIf user-agent "cmsworldmap" stayout=1
-SetEnvIf user-agent "comodo" stayout=1
-SetEnvIf user-agent "Custo" stayout=1
-SetEnvIf user-agent "Default Browser 0" stayout=1
-SetEnvIf user-agent "diavol" stayout=1
-SetEnvIf user-agent "DIIbot" stayout=1
-SetEnvIf user-agent "DISCo" stayout=1
-SetEnvIf user-agent "dotbot" stayout=1
-SetEnvIf user-agent "Download Demon" stayout=1
-SetEnvIf user-agent "eCatch" stayout=1
-SetEnvIf user-agent "EirGrabber" stayout=1
-SetEnvIf user-agent "EmailCollector" stayout=1
-SetEnvIf user-agent "EmailSiphon" stayout=1
-SetEnvIf user-agent "EmailWolf" stayout=1
-SetEnvIf user-agent "Express WebPictures" stayout=1
-SetEnvIf user-agent "extract" stayout=1
-SetEnvIf user-agent "ExtractorPro" stayout=1
-SetEnvIf user-agent "EyeNetIE" stayout=1
-SetEnvIf user-agent "feedfinder" stayout=1
-SetEnvIf user-agent "FHscan" stayout=1
-SetEnvIf user-agent "FlashGet" stayout=1
-SetEnvIf user-agent "flicky" stayout=1
-SetEnvIf user-agent "GetRight" stayout=1
-SetEnvIf user-agent "GetWeb!" stayout=1
-SetEnvIf user-agent "Go-Ahead-Got-It" stayout=1
-SetEnvIf user-agent "Go!Zilla" stayout=1
-SetEnvIf user-agent "grab" stayout=1
-SetEnvIf user-agent "GrabNet" stayout=1
-SetEnvIf user-agent "Grafula" stayout=1
-SetEnvIf user-agent "harvest" stayout=1
-SetEnvIf user-agent "HMView" stayout=1
-SetEnvIf user-agent "ia_archiver" stayout=1
-SetEnvIf user-agent "Image Stripper" stayout=1
-SetEnvIf user-agent "Image Sucker" stayout=1
-SetEnvIf user-agent "InterGET" stayout=1
-SetEnvIf user-agent "Internet Ninja" stayout=1
-SetEnvIf user-agent "InternetSeer.com" stayout=1
-SetEnvIf user-agent "jakarta" stayout=1
-SetEnvIf user-agent "Java" stayout=1
-SetEnvIf user-agent "JetCar" stayout=1
-SetEnvIf user-agent "JOC Web Spider" stayout=1
-SetEnvIf user-agent "kmccrew" stayout=1
-SetEnvIf user-agent "larbin" stayout=1
-SetEnvIf user-agent "LeechFTP" stayout=1
-SetEnvIf user-agent "libwww" stayout=1
-SetEnvIf user-agent "Mass Downloader" stayout=1
-SetEnvIf user-agent "Maxthon$" stayout=1
-SetEnvIf user-agent "microsoft.url" stayout=1
-SetEnvIf user-agent "MIDown tool" stayout=1
-SetEnvIf user-agent "miner" stayout=1
-SetEnvIf user-agent "Mister PiX" stayout=1
-SetEnvIf user-agent "NEWT" stayout=1
-SetEnvIf user-agent "MSFrontPage" stayout=1
-SetEnvIf user-agent "Navroad" stayout=1
-SetEnvIf user-agent "NearSite" stayout=1
-SetEnvIf user-agent "Net Vampire" stayout=1
-SetEnvIf user-agent "NetAnts" stayout=1
-SetEnvIf user-agent "NetSpider" stayout=1
-SetEnvIf user-agent "NetZIP" stayout=1
-SetEnvIf user-agent "nutch" stayout=1
-SetEnvIf user-agent "Octopus" stayout=1
-SetEnvIf user-agent "Offline Explorer" stayout=1
-SetEnvIf user-agent "Offline Navigator" stayout=1
-SetEnvIf user-agent "PageGrabber" stayout=1
-SetEnvIf user-agent "Papa Foto" stayout=1
-SetEnvIf user-agent "pavuk" stayout=1
-SetEnvIf user-agent "pcBrowser" stayout=1
-SetEnvIf user-agent "PeoplePal" stayout=1
-SetEnvIf user-agent "planetwork" stayout=1
-SetEnvIf user-agent "psbot" stayout=1
-SetEnvIf user-agent "purebot" stayout=1
-SetEnvIf user-agent "pycurl" stayout=1
-SetEnvIf user-agent "RealDownload" stayout=1
-SetEnvIf user-agent "ReGet" stayout=1
-SetEnvIf user-agent "Rippers 0" stayout=1
-SetEnvIf user-agent "SeaMonkey$" stayout=1
-SetEnvIf user-agent "sitecheck.internetseer.com" stayout=1
-SetEnvIf user-agent "SiteSnagger" stayout=1
-SetEnvIf user-agent "skygrid" stayout=1
-SetEnvIf user-agent "SmartDownload" stayout=1
-SetEnvIf user-agent "sucker" stayout=1
-SetEnvIf user-agent "SuperBot" stayout=1
-SetEnvIf user-agent "SuperHTTP" stayout=1
-SetEnvIf user-agent "Surfbot" stayout=1
-SetEnvIf user-agent "tAkeOut" stayout=1
-SetEnvIf user-agent "Teleport Pro" stayout=1
-SetEnvIf user-agent "Toata dragostea mea pentru diavola" stayout=1
-SetEnvIf user-agent "turnit" stayout=1
-SetEnvIf user-agent "vikspider" stayout=1
-SetEnvIf user-agent "VoidEYE" stayout=1
-SetEnvIf user-agent "Web Image Collector" stayout=1
-SetEnvIf user-agent "Web Sucker" stayout=1
-SetEnvIf user-agent "WebAuto" stayout=1
-SetEnvIf user-agent "WebCopier" stayout=1
-SetEnvIf user-agent "WebFetch" stayout=1
-SetEnvIf user-agent "WebGo IS" stayout=1
-SetEnvIf user-agent "WebLeacher" stayout=1
-SetEnvIf user-agent "WebReaper" stayout=1
-SetEnvIf user-agent "WebSauger" stayout=1
-SetEnvIf user-agent "Website eXtractor" stayout=1
-SetEnvIf user-agent "Website Quester" stayout=1
-SetEnvIf user-agent "WebStripper" stayout=1
-SetEnvIf user-agent "WebWhacker" stayout=1
-SetEnvIf user-agent "WebZIP" stayout=1
-SetEnvIf user-agent "Wget" stayout=1
-SetEnvIf user-agent "Widow" stayout=1
-SetEnvIf user-agent "WWW-Mechanize" stayout=1
-SetEnvIf user-agent "WWWOFFLE" stayout=1
-SetEnvIf user-agent "Xaldon WebSpider" stayout=1
-SetEnvIf user-agent "Yandex" stayout=1
-SetEnvIf user-agent "Zeus" stayout=1
-SetEnvIf user-agent "zmeu" stayout=1
-SetEnvIf user-agent "CazoodleBot" stayout=1
-SetEnvIf user-agent "discobot" stayout=1
-SetEnvIf user-agent "ecxi" stayout=1
-SetEnvIf user-agent "GT::WWW" stayout=1
-SetEnvIf user-agent "heritrix" stayout=1
-SetEnvIf user-agent "HTTP::Lite" stayout=1
-SetEnvIf user-agent "HTTrack" stayout=1
-SetEnvIf user-agent "ia_archiver" stayout=1
-SetEnvIf user-agent "id-search" stayout=1
-SetEnvIf user-agent "id-search.org" stayout=1
-SetEnvIf user-agent "IDBot" stayout=1
-SetEnvIf user-agent "Indy Library" stayout=1
-SetEnvIf user-agent "IRLbot" stayout=1
-SetEnvIf user-agent "ISC Systems iRc Search 2.1" stayout=1
-SetEnvIf user-agent "LinksManager.com_bot" stayout=1
-SetEnvIf user-agent "linkwalker" stayout=1
-SetEnvIf user-agent "lwp-trivial" stayout=1
-SetEnvIf user-agent "MFC_Tear_Sample" stayout=1
-SetEnvIf user-agent "Microsoft URL Control" stayout=1
-SetEnvIf user-agent "Missigua Locator" stayout=1
-SetEnvIf user-agent "panscient.com" stayout=1
-SetEnvIf user-agent "PECL::HTTP" stayout=1
-SetEnvIf user-agent "PHPCrawl" stayout=1
-SetEnvIf user-agent "PleaseCrawl" stayout=1
-SetEnvIf user-agent "SBIder" stayout=1
-SetEnvIf user-agent "Snoopy" stayout=1
-SetEnvIf user-agent "Steeler" stayout=1
-SetEnvIf user-agent "URI::Fetch" stayout=1
-SetEnvIf user-agent "urllib" stayout=1
-SetEnvIf user-agent "Web Sucker" stayout=1
-SetEnvIf user-agent "webalta" stayout=1
-SetEnvIf user-agent "WebCollage" stayout=1
-SetEnvIf user-agent "Wells Search II" stayout=1
-SetEnvIf user-agent "WEP Search" stayout=1
-SetEnvIf user-agent "zermelo" stayout=1
-SetEnvIf user-agent "ZyBorg" stayout=1
-SetEnvIf user-agent "Indy Library" stayout=1
-SetEnvIf user-agent "libwww-perl" stayout=1
-SetEnvIf user-agent "Go!Zilla" stayout=1
-SetEnvIf user-agent "TurnitinBot" stayout=1
+	# Default expiration: 1 hour after request
+	ExpiresDefault "now plus 1 hour"
+
+	# CSS and JS expiration: 1 week after request
+	ExpiresByType text/css "now plus 1 week"
+	ExpiresByType application/javascript "now plus 1 week"
+	ExpiresByType application/x-javascript "now plus 1 week"
+
+	# Image files expiration: 1 month after request
+	ExpiresByType image/bmp "now plus 1 month"
+	ExpiresByType image/gif "now plus 1 month"
+	ExpiresByType image/jpeg "now plus 1 month"
+	ExpiresByType image/jp2 "now plus 1 month"
+	ExpiresByType image/pipeg "now plus 1 month"
+	ExpiresByType image/png "now plus 1 month"
+	ExpiresByType image/svg+xml "now plus 1 month"
+	ExpiresByType image/tiff "now plus 1 month"
+	ExpiresByType image/vnd.microsoft.icon "now plus 1 month"
+	ExpiresByType image/x-icon "now plus 1 month"
+	ExpiresByType image/ico "now plus 1 month"
+	ExpiresByType image/icon "now plus 1 month"
+	ExpiresByType text/ico "now plus 1 month"
+	ExpiresByType application/ico "now plus 1 month"
+	ExpiresByType image/vnd.wap.wbmp "now plus 1 month"
+	ExpiresByType application/vnd.wap.wbxml "now plus 1 month"
+	ExpiresByType application/smil "now plus 1 month"
+
+	# Font files expiration: 1 week after request
+	ExpiresByType application/vnd.ms-fontobject "now plus 1 week"
+	ExpiresByType application/x-font-ttf "now plus 1 week"
+	ExpiresByType application/x-font-opentype "now plus 1 week"
+	ExpiresByType application/x-font-woff "now plus 1 week"
+	ExpiresByType font/woff2 "now plus 1 week"
+	ExpiresByType image/svg+xml "now plus 1 week"
+
+	# Audio files expiration: 1 month after request
+	ExpiresByType audio/basic "now plus 1 month"
+	ExpiresByType audio/mid "now plus 1 month"
+	ExpiresByType audio/midi "now plus 1 month"
+	ExpiresByType audio/mpeg "now plus 1 month"
+	ExpiresByType audio/x-aiff "now plus 1 month"
+	ExpiresByType audio/x-mpegurl "now plus 1 month"
+	ExpiresByType audio/x-pn-realaudio "now plus 1 month"
+	ExpiresByType audio/x-wav "now plus 1 month"
+
+	# Movie files expiration: 1 month after request
+	ExpiresByType application/x-shockwave-flash "now plus 1 month"
+	ExpiresByType x-world/x-vrml "now plus 1 month"
+	ExpiresByType video/x-msvideo "now plus 1 month"
+	ExpiresByType video/mpeg "now plus 1 month"
+	ExpiresByType video/mp4 "now plus 1 month"
+	ExpiresByType video/quicktime "now plus 1 month"
+	ExpiresByType video/x-la-asf "now plus 1 month"
+	ExpiresByType video/x-ms-asf "now plus 1 month"
+</IfModule>
+
+	# Disable caching of administrator/index.php
+<Files "administrator/index.php">
+	<IfModule mod_expires.c>
+		ExpiresActive Off
+	</IfModule>
+	<IfModule mod_headers.c>
+		Header unset ETag
+		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+		Header set Pragma "no-cache"
+		Header set Expires "Wed, 17 Aug 2005 00:00:00 GMT"
+	</IfModule>
+</Files>
+###########################################
+
+###########################################
+# = Block hacking tools / bandwidth hoggers =
+# = Denies access to specific user agents. Any request with a user agent that
+# = partially matches an entry in this list will be blocked.
+	SetEnvIf user-agent "WebBandit" stayout=1
+	SetEnvIf user-agent "webbandit" stayout=1
+	SetEnvIf user-agent "Acunetix" stayout=1
+	SetEnvIf user-agent "binlar" stayout=1
+	SetEnvIf user-agent "BlackWidow" stayout=1
+	SetEnvIf user-agent "Bolt 0" stayout=1
+	SetEnvIf user-agent "Bot mailto:craftbot@yahoo.com" stayout=1
+	SetEnvIf user-agent "BOT for JCE" stayout=1
+	SetEnvIf user-agent "casper" stayout=1
+	SetEnvIf user-agent "checkprivacy" stayout=1
+	SetEnvIf user-agent "ChinaClaw" stayout=1
+	SetEnvIf user-agent "clshttp" stayout=1
+	SetEnvIf user-agent "cmsworldmap" stayout=1
+	SetEnvIf user-agent "comodo" stayout=1
+	SetEnvIf user-agent "Custo" stayout=1
+	SetEnvIf user-agent "Default Browser 0" stayout=1
+	SetEnvIf user-agent "diavol" stayout=1
+	SetEnvIf user-agent "DIIbot" stayout=1
+	SetEnvIf user-agent "DISCo" stayout=1
+	SetEnvIf user-agent "dotbot" stayout=1
+	SetEnvIf user-agent "Download Demon" stayout=1
+	SetEnvIf user-agent "eCatch" stayout=1
+	SetEnvIf user-agent "EirGrabber" stayout=1
+	SetEnvIf user-agent "EmailCollector" stayout=1
+	SetEnvIf user-agent "EmailSiphon" stayout=1
+	SetEnvIf user-agent "EmailWolf" stayout=1
+	SetEnvIf user-agent "Express WebPictures" stayout=1
+	SetEnvIf user-agent "extract" stayout=1
+	SetEnvIf user-agent "ExtractorPro" stayout=1
+	SetEnvIf user-agent "EyeNetIE" stayout=1
+	SetEnvIf user-agent "feedfinder" stayout=1
+	SetEnvIf user-agent "FHscan" stayout=1
+	SetEnvIf user-agent "FlashGet" stayout=1
+	SetEnvIf user-agent "flicky" stayout=1
+	SetEnvIf user-agent "GetRight" stayout=1
+	SetEnvIf user-agent "GetWeb!" stayout=1
+	SetEnvIf user-agent "Go-Ahead-Got-It" stayout=1
+	SetEnvIf user-agent "Go!Zilla" stayout=1
+	SetEnvIf user-agent "grab" stayout=1
+	SetEnvIf user-agent "GrabNet" stayout=1
+	SetEnvIf user-agent "Grafula" stayout=1
+	SetEnvIf user-agent "harvest" stayout=1
+	SetEnvIf user-agent "HMView" stayout=1
+	SetEnvIf user-agent "ia_archiver" stayout=1
+	SetEnvIf user-agent "Image Stripper" stayout=1
+	SetEnvIf user-agent "Image Sucker" stayout=1
+	SetEnvIf user-agent "InterGET" stayout=1
+	SetEnvIf user-agent "Internet Ninja" stayout=1
+	SetEnvIf user-agent "InternetSeer.com" stayout=1
+	SetEnvIf user-agent "jakarta" stayout=1
+	SetEnvIf user-agent "Java" stayout=1
+	SetEnvIf user-agent "JetCar" stayout=1
+	SetEnvIf user-agent "JOC Web Spider" stayout=1
+	SetEnvIf user-agent "kmccrew" stayout=1
+	SetEnvIf user-agent "larbin" stayout=1
+	SetEnvIf user-agent "LeechFTP" stayout=1
+	SetEnvIf user-agent "libwww" stayout=1
+	SetEnvIf user-agent "Mass Downloader" stayout=1
+	SetEnvIf user-agent "Maxthon$" stayout=1
+	SetEnvIf user-agent "microsoft.url" stayout=1
+	SetEnvIf user-agent "MIDown tool" stayout=1
+	SetEnvIf user-agent "miner" stayout=1
+	SetEnvIf user-agent "Mister PiX" stayout=1
+	SetEnvIf user-agent "NEWT" stayout=1
+	SetEnvIf user-agent "MSFrontPage" stayout=1
+	SetEnvIf user-agent "Navroad" stayout=1
+	SetEnvIf user-agent "NearSite" stayout=1
+	SetEnvIf user-agent "Net Vampire" stayout=1
+	SetEnvIf user-agent "NetAnts" stayout=1
+	SetEnvIf user-agent "NetSpider" stayout=1
+	SetEnvIf user-agent "NetZIP" stayout=1
+	SetEnvIf user-agent "nutch" stayout=1
+	SetEnvIf user-agent "Octopus" stayout=1
+	SetEnvIf user-agent "Offline Explorer" stayout=1
+	SetEnvIf user-agent "Offline Navigator" stayout=1
+	SetEnvIf user-agent "PageGrabber" stayout=1
+	SetEnvIf user-agent "Papa Foto" stayout=1
+	SetEnvIf user-agent "pavuk" stayout=1
+	SetEnvIf user-agent "pcBrowser" stayout=1
+	SetEnvIf user-agent "PeoplePal" stayout=1
+	SetEnvIf user-agent "planetwork" stayout=1
+	SetEnvIf user-agent "psbot" stayout=1
+	SetEnvIf user-agent "purebot" stayout=1
+	SetEnvIf user-agent "pycurl" stayout=1
+	SetEnvIf user-agent "RealDownload" stayout=1
+	SetEnvIf user-agent "ReGet" stayout=1
+	SetEnvIf user-agent "Rippers 0" stayout=1
+	SetEnvIf user-agent "SeaMonkey$" stayout=1
+	SetEnvIf user-agent "sitecheck.internetseer.com" stayout=1
+	SetEnvIf user-agent "SiteSnagger" stayout=1
+	SetEnvIf user-agent "skygrid" stayout=1
+	SetEnvIf user-agent "SmartDownload" stayout=1
+	SetEnvIf user-agent "sucker" stayout=1
+	SetEnvIf user-agent "SuperBot" stayout=1
+	SetEnvIf user-agent "SuperHTTP" stayout=1
+	SetEnvIf user-agent "Surfbot" stayout=1
+	SetEnvIf user-agent "tAkeOut" stayout=1
+	SetEnvIf user-agent "Teleport Pro" stayout=1
+	SetEnvIf user-agent "Toata dragostea mea pentru diavola" stayout=1
+	SetEnvIf user-agent "turnit" stayout=1
+	SetEnvIf user-agent "vikspider" stayout=1
+	SetEnvIf user-agent "VoidEYE" stayout=1
+	SetEnvIf user-agent "Web Image Collector" stayout=1
+	SetEnvIf user-agent "Web Sucker" stayout=1
+	SetEnvIf user-agent "WebAuto" stayout=1
+	SetEnvIf user-agent "WebCopier" stayout=1
+	SetEnvIf user-agent "WebFetch" stayout=1
+	SetEnvIf user-agent "WebGo IS" stayout=1
+	SetEnvIf user-agent "WebLeacher" stayout=1
+	SetEnvIf user-agent "WebReaper" stayout=1
+	SetEnvIf user-agent "WebSauger" stayout=1
+	SetEnvIf user-agent "Website eXtractor" stayout=1
+	SetEnvIf user-agent "Website Quester" stayout=1
+	SetEnvIf user-agent "WebStripper" stayout=1
+	SetEnvIf user-agent "WebWhacker" stayout=1
+	SetEnvIf user-agent "WebZIP" stayout=1
+	SetEnvIf user-agent "Widow" stayout=1
+	SetEnvIf user-agent "WWW-Mechanize" stayout=1
+	SetEnvIf user-agent "WWWOFFLE" stayout=1
+	SetEnvIf user-agent "Xaldon WebSpider" stayout=1
+	SetEnvIf user-agent "Yandex" stayout=1
+	SetEnvIf user-agent "Zeus" stayout=1
+	SetEnvIf user-agent "zmeu" stayout=1
+	SetEnvIf user-agent "CazoodleBot" stayout=1
+	SetEnvIf user-agent "discobot" stayout=1
+	SetEnvIf user-agent "ecxi" stayout=1
+	SetEnvIf user-agent "GT::WWW" stayout=1
+	SetEnvIf user-agent "heritrix" stayout=1
+	SetEnvIf user-agent "HTTP::Lite" stayout=1
+	SetEnvIf user-agent "HTTrack" stayout=1
+	SetEnvIf user-agent "ia_archiver" stayout=1
+	SetEnvIf user-agent "id-search" stayout=1
+	SetEnvIf user-agent "id-search.org" stayout=1
+	SetEnvIf user-agent "IDBot" stayout=1
+	SetEnvIf user-agent "Indy Library" stayout=1
+	SetEnvIf user-agent "IRLbot" stayout=1
+	SetEnvIf user-agent "ISC Systems iRc Search 2.1" stayout=1
+	SetEnvIf user-agent "LinksManager.com_bot" stayout=1
+	SetEnvIf user-agent "linkwalker" stayout=1
+	SetEnvIf user-agent "lwp-trivial" stayout=1
+	SetEnvIf user-agent "MFC_Tear_Sample" stayout=1
+	SetEnvIf user-agent "Microsoft URL Control" stayout=1
+	SetEnvIf user-agent "Missigua Locator" stayout=1
+	SetEnvIf user-agent "panscient.com" stayout=1
+	SetEnvIf user-agent "PECL::HTTP" stayout=1
+	SetEnvIf user-agent "PHPCrawl" stayout=1
+	SetEnvIf user-agent "PleaseCrawl" stayout=1
+	SetEnvIf user-agent "SBIder" stayout=1
+	SetEnvIf user-agent "Snoopy" stayout=1
+	SetEnvIf user-agent "Steeler" stayout=1
+	SetEnvIf user-agent "URI::Fetch" stayout=1
+	SetEnvIf user-agent "urllib" stayout=1
+	SetEnvIf user-agent "Web Sucker" stayout=1
+	SetEnvIf user-agent "webalta" stayout=1
+	SetEnvIf user-agent "WebCollage" stayout=1
+	SetEnvIf user-agent "Wells Search II" stayout=1
+	SetEnvIf user-agent "WEP Search" stayout=1
+	SetEnvIf user-agent "zermelo" stayout=1
+	SetEnvIf user-agent "ZyBorg" stayout=1
+	SetEnvIf user-agent "Indy Library" stayout=1
+	SetEnvIf user-agent "libwww-perl" stayout=1
+	SetEnvIf user-agent "Go!Zilla" stayout=1
+	SetEnvIf user-agent "TurnitinBot" stayout=1
+
 <IfModule !mod_authz_core.c>
 deny from env=stayout
 </IfModule>
 <IfModule mod_authz_core.c>
-<RequireAll>
-Require all granted
-Require not env stayout
-</RequireAll>
+  <RequireAll>
+	Require all granted
+	Require not env stayout
+  </RequireAll>
 </IfModule>
-##### Common hacking tools and bandwidth hoggers block -- END
-##### Automatic compression of resources -- BEGIN
-<ifmodule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/svg+xml
-</ifmodule>
-<ifModule mod_gzip.c>
-mod_gzip_on Yes
-mod_gzip_dechunk Yes
-mod_gzip_keep_workfiles No
-mod_gzip_can_negotiate Yes
-mod_gzip_add_header_count Yes
-mod_gzip_send_vary Yes
-mod_gzip_min_http 1000
-mod_gzip_minimum_file_size 300
-mod_gzip_maximum_file_size 512000
-mod_gzip_maximum_inmem_size 60000
-mod_gzip_handle_methods GET
-mod_gzip_item_include file \.(html?|txt|css|js|php|pl|xml|rb|py|svg|scgz)$
-mod_gzip_item_include mime ^text/plain$
-mod_gzip_item_include mime ^text/xml$
-mod_gzip_item_include mime ^text/css$
-mod_gzip_item_include mime ^application/xml$
-mod_gzip_item_include mime ^application/xhtml+xml$
-mod_gzip_item_include mime ^application/rss+xml$
-mod_gzip_item_include mime ^application/javascript$
-mod_gzip_item_include mime ^application/x-javascript$
-mod_gzip_item_include mime ^image/svg+xml$
-mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
-mod_gzip_item_include handler ^cgi-script$
-mod_gzip_item_include handler ^server-status$
-mod_gzip_item_include handler ^server-info$
-mod_gzip_item_include handler ^application/x-httpd-php
-mod_gzip_item_exclude mime ^image/.*
-</ifmodule>
+###########################################
+
+###########################################
+# == Automatic compression of resources ==
+# Automatically serve .css.gz, .css.br, .js.gz or .js.br instead of the original file
+# These are versions of the files pre-compressed with GZip or Brotli, respectively
+<IfModule mod_headers.c>
+    # Serve Brotli compressed CSS files if they exist and the client accepts Brotli.
+    RewriteCond "%{HTTP:Accept-encoding}" "br"
+    RewriteCond "%{REQUEST_FILENAME}\.br" -s
+    RewriteRule "^(.*)\.css" "$1\.css\.br" [QSA]
+
+    # Serve Brotli compressed JS files if they exist and the client accepts Brotli.
+    RewriteCond "%{HTTP:Accept-encoding}" "br"
+    RewriteCond "%{REQUEST_FILENAME}\.br" -s
+    RewriteRule "^(.*)\.js" "$1\.js\.br" [QSA]
+    
+    # Serve correct content types, and prevent double compression.
+    RewriteRule "\.css\.br$" "-" [E=no-gzip:1]
+    RewriteRule "\.css\.br$" "-" [T=text/css,E=no-brotli:1,L]
+    RewriteRule "\.js\.br$" "-" [E=no-gzip:1]
+    RewriteRule "\.js\.br$"  "-" [T=text/javascript,E=no-brotli:1,L]
+    
+    <FilesMatch "(\.js\.br|\.css\.br)$">
+      # Serve correct encoding type.
+      Header append Content-Encoding br
+
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+    RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+    RewriteRule "^(.*)\.js" "$1\.js\.gz" [QSA]
+
+    # Serve correct content types, and prevent mod_filter double gzip.
+    # Also set it as the last rule to prevent the Front- or Backend protection from preventing access to the .gz file.
+    RewriteRule "\.css\.gz$" "-" [E=no-brotli:1]
+    RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1,L]
+    RewriteRule "\.js\.gz$" "-" [E=no-brotli:1]
+    RewriteRule "\.js\.gz$" "-" [T=text/javascript,E=no-gzip:1,L]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header append Content-Encoding gzip
+
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+## Automatically compress by MIME type using mod_brotli. Takes priority due to better compression ratio.
+<IfModule mod_brotli.c>
+	AddOutputFilterByType BROTLI_COMPRESS text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript text/javascript image/svg+xml
+</IfModule>
+
+## Automatically compress by MIME type using mod_filter.
+<IfModule mod_filter.c>
+	AddOutputFilterByType DEFLATE text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript text/javascript image/svg+xml
+</IfModule>
+
+## Fallback to mod_gzip when neither mod_brotli nor mod_filter is available
+<IfModule !mod_brotli.c>
+	<IfModule !mod_filter.c>
+		<IfModule mod_gzip.c>
+			mod_gzip_on Yes
+			mod_gzip_dechunk Yes
+			mod_gzip_keep_workfiles No
+			mod_gzip_can_negotiate Yes
+			mod_gzip_add_header_count Yes
+			mod_gzip_send_vary Yes
+			mod_gzip_min_http 1000
+			mod_gzip_minimum_file_size 300
+			mod_gzip_maximum_file_size 512000
+			mod_gzip_maximum_inmem_size 60000
+			mod_gzip_handle_methods GET
+			mod_gzip_item_include file \.(html?|txt|css|js|php|pl|xml|rb|py|svg|scgz)$
+			mod_gzip_item_include mime ^text/javascript$
+			mod_gzip_item_include mime ^text/plain$
+			mod_gzip_item_include mime ^text/xml$
+			mod_gzip_item_include mime ^text/css$
+			mod_gzip_item_include mime ^application/xml$
+			mod_gzip_item_include mime ^application/xhtml+xml$
+			mod_gzip_item_include mime ^application/rss+xml$
+			mod_gzip_item_include mime ^application/javascript$
+			mod_gzip_item_include mime ^application/x-javascript$
+			mod_gzip_item_include mime ^image/svg+xml$
+			mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+			mod_gzip_item_include handler ^cgi-script$
+			mod_gzip_item_include handler ^server-status$
+			mod_gzip_item_include handler ^server-info$
+			mod_gzip_item_include handler ^application/x-httpd-php
+			mod_gzip_item_exclude mime ^image/.*
+		</ifmodule>
+	</IfModule>
+</IfModule>
 ##### Automatic compression of resources -- END
 ## Force GZip compression for mangled Accept-Encoding headers
 <IfModule mod_setenvif.c>
-<IfModule mod_headers.c>
-SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+	<IfModule mod_headers.c>
+		SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+		RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+	</IfModule>
 </IfModule>
-</IfModule>
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
-Header unset ETag
-FileETag None
-</FilesMatch>
+###########################################
 
-##### Rewrite rules to block out some common exploits -- BEGIN
-RewriteCond %{QUERY_STRING} proc/self/environ [OR]
-RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
-RewriteCond %{QUERY_STRING} base64_(en|de)code\(.*\) [OR]
-RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+###########################################
+# Set the UTF-8 character set as the default
+AddDefaultCharset utf-8
+
+# Media type `charset`parameter set to `UTF-8`
+<IfModule mod_mime.c>
+	AddCharset utf-8 .atom \
+					 .bbaw \
+					 .css \
+					 .geojson \
+					 .js \
+					 .json \
+					 .jsonld \
+					 .rdf \
+					 .rss \
+					 .topojson \
+					 .vtt \
+					 .webapp \
+					 .xloc \
+					 .xml
+</IfModule>
+###########################################
+
+###########################################
+# ==== Block out some common exploits. ====
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
 RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
 RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
 RewriteRule .* index.php [F]
-##### Rewrite rules to block out some common exploits -- END
-##### File injection protection -- BEGIN
+
+# ======= File injection protection =======
 RewriteCond %{REQUEST_METHOD} GET
-RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http[s]?:// [OR]
 RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
 RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
 RewriteRule .* - [F]
 ##### File injection protection -- END
-##### Advanced server protection rules exceptions -- BEGIN
+###########################################
+
+###########################################
+# ===== Advanced server protection  =======
+# =============== Exceptions ===============
 RewriteRule ^administrator\/components\/com_akeeba\/restore\.php$ - [L]
-RewriteRule ^administrator\/components\/com_admintools\/restore\.php$ - [L]
 RewriteRule ^administrator\/components\/com_joomlaupdate\/restore\.php$ - [L]
-RewriteRule ^templates\/your_template_name_here/ - [L]
-##### Advanced server protection rules exceptions -- END
-##### Advanced server protection -- BEGIN
+RewriteCond %{REQUEST_FILENAME} !(\.php)$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^\.well\-known/ - [L]
+
+# =============== Begin ===============
+## Disable PHP Easter Eggs
 RewriteCond %{QUERY_STRING} \=PHP[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} [NC]
 RewriteRule .* - [F]
-## Disallow access to htaccess.txt, php.ini and configuration.php-dist
-RewriteRule ^(htaccess\.txt|configuration\.php-dist|php\.ini)$ - [F]
-## Protect against clickjacking
 
-## Reflected XSS prevention
+# =============== Backend ===============
+RewriteRule ^administrator/?$ - [L]
+RewriteRule ^administrator/index\.(php|html?)$ - [L]
+RewriteRule ^administrator/(components|modules|templates|images|plugins)/.*\.(jpe|jpg|jpeg|jp2|jpe2|png|gif|bmp|css|js|swf|html|mpg|mp3|mpeg|mp4|avi|wav|ogg|ogv|xls|xlsx|doc|docx|ppt|pptx|zip|rar|pdf|xps|txt|7z|svg|odt|ods|odp|flv|mov|htm|ttf|woff|woff2|eot|ico|JPG|JPEG|PNG|GIF|CSS|JS|TTF|WOFF|WOFF2|EOT)$ - [L]
+RewriteRule ^administrator/ - [F]
+
+# =============== Frontend ===============
+## Allow limited access for certain directories with client-accessible content
+RewriteRule ^(components|modules|templates|images|plugins|media|libraries|media/jui/fonts)/.*\.(jpe|jpg|jpeg|jp2|jpe2|svg|png|gif|bmp|css|js|swf|html|mpg|mp3|mpeg|mp4|avi|wav|ogg|ogv|xls|xlsx|doc|docx|ppt|pptx|zip|rar|pdf|xps|txt|7z|svg|odt|ods|odp|flv|mov|ico|htm|ttf|woff|woff2|eot)$ - [L,NC]
+RewriteRule ^(components|modules|templates|images|plugins|media|libraries|media/jui/fonts)/ - [F]
+## Disallow front-end access for certain Joomla! system directories (unless access to their files is allowed above)
+RewriteRule ^(cache|includes|language|logs|log|tmp)/ - [F]
+RewriteRule ^(configuration\.php|htaccess\.txt|joomla\.xml|LICENSE\.txt|README\.txt|web\.config\.txt) - [F]
+
+## Explicitly allow access to the site's index.php main entry point file
+RewriteRule ^index.php(/.*){0,1}$ - [L]
+## Explicitly allow access to the site's robots.txt file
+RewriteRule ^robots.txt$ - [L]
+## Disallow access to all other PHP files throughout the site, unless they are explicitly allowed
+RewriteCond %{REQUEST_FILENAME} (\.php)$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule (.*\.php)$ - [F]
+## Disallow access to htaccess.txt, php.ini, .user.ini and configuration.php-dist
+RewriteRule ^(htaccess\.txt|configuration\.php-dist|php\.ini|\.user\.ini)$ - [F]
+# Disallow access to all other front-end folders
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !^/
+RewriteRule .* - [F]
+# Disallow access to all other front-end files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule !^index.php$ - [F]
+###########################################
+
+###########################################
+# =========== Security Headers ============
 <IfModule mod_headers.c>
-	Header set X-XSS-Protection "1; mode=block"
-	Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
-	Header always set X-Content-Type-Options "nosniff"
-</IfModule>
-
-# mod_headers cannot match based on the content-type, however,
-# the X-XSS-Protection response header should be send only for
-# HTML documents and not for the other resources.
-<IfModule mod_headers.c>
-	<FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-		Header unset X-XSS-Protection
-	</FilesMatch>
-</IfModule>
-
-Header always set X-Content-Type-Options "nosniff"
-##### Advanced server protection -- END
-##### Joomla! core SEF Section -- BEGIN
-	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-	RewriteCond %{REQUEST_URI} !^/index\.php
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule .* index.php [L]
-##### Joomla! core SEF Section -- END
-<Files 403.shtml>
-order allow,deny
-allow from all
-</Files>
-
-
-deny from 109.106.143.127
-deny from 109.106.143.162
-deny from 109.105.66.214
-deny from 109.105.64.25
-
-
-##################### Security Header #####################
-<IfModule mod_headers.c>
+	# X-Powered-By
+	Header unset X-Powered-By
+	# X-XSS-Protection
+	Header always set X-XSS-Protection "1; mode=block"
+	# X-Frame-Options
+	Header always set X-Frame-Options SAMEORIGIN
+	# X-Content-Type nosniff
+	Header always set X-Content-Type-Options nosniff
 	# Referrer-Policy
 	Header always set Referrer-Policy "no-referrer-when-downgrade"
+	# Strict-Transport-Security
+	Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 	# Content-Security-Policy
-	Header always set Content-Security-Policy "default-src 'self' https://*.joomla.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.pinterest.com https://*.googletagservices.com https://*.google.ac https://*.google.ad https://*.google.ae https://*.google.al https://*.google.am https://*.google.as https://*.google.at https://*.google.az https://*.google.ba https://*.google.be https://*.google.bf https://*.google.bg https://*.google.bi https://*.google.bj https://*.google.bs https://*.google.bt https://*.google.by https://*.google.ca https://*.google.cat https://*.google.cc https://*.google.cd https://*.google.cf https://*.google.cg https://*.google.ch https://*.google.ci https://*.google.cl https://*.google.cm https://*.google.cn https://*.google.co.ao https://*.google.co.bw https://*.google.co.ck https://*.google.co.cr https://*.google.co.id https://*.google.co.il https://*.google.co.in https://*.google.co.jp https://*.google.co.ke https://*.google.co.kr https://*.google.co.ls https://*.google.co.ma https://*.google.co.mz https://*.google.co.nz https://*.google.co.th https://*.google.co.tz https://*.google.co.ug https://*.google.co.uk https://*.google.co.uz https://*.google.co.ve https://*.google.co.vi https://*.google.co.za https://*.google.co.zm https://*.google.co.zw https://*.google.com https://*.google.com.af https://*.google.com.ag https://*.google.com.ai https://*.google.com.ar https://*.google.com.au https://*.google.com.bd https://*.google.com.bh https://*.google.com.bn https://*.google.com.bo https://*.google.com.br https://*.google.com.bz https://*.google.com.co https://*.google.com.cu https://*.google.com.cy https://*.google.com.do https://*.google.com.ec https://*.google.com.eg https://*.google.com.et https://*.google.com.fj https://*.google.com.gh https://*.google.com.gi https://*.google.com.gt https://*.google.com.hk https://*.google.com.jm https://*.google.com.kh https://*.google.com.kw https://*.google.com.lb https://*.google.com.lc https://*.google.com.ly https://*.google.com.mm https://*.google.com.mt https://*.google.com.mx https://*.google.com.my https://*.google.com.na https://*.google.com.nf https://*.google.com.ng https://*.google.com.ni https://*.google.com.np https://*.google.com.om https://*.google.com.pa https://*.google.com.pe https://*.google.com.pg https://*.google.com.ph https://*.google.com.pk https://*.google.com.pr https://*.google.com.py https://*.google.com.qa https://*.google.com.sa https://*.google.com.sb https://*.google.com.sg https://*.google.com.sl https://*.google.com.sv https://*.google.com.tj https://*.google.com.tr https://*.google.com.tw https://*.google.com.ua https://*.google.com.uy https://*.google.com.vc https://*.google.com.vn https://*.google.cv https://*.google.cz https://*.google.de https://*.google.dj https://*.google.dk https://*.google.dm https://*.google.dz https://*.google.ee https://*.google.es https://*.google.fi https://*.google.fm https://*.google.fr https://*.google.ga https://*.google.ge https://*.google.gf https://*.google.gg https://*.google.gl https://*.google.gm https://*.google.gp https://*.google.gr https://*.google.gy https://*.google.hn https://*.google.hr https://*.google.ht https://*.google.hu https://*.google.ie https://*.google.im https://*.google.io https://*.google.iq https://*.google.is https://*.google.it https://*.google.je https://*.google.jo https://*.google.kg https://*.google.ki https://*.google.kz https://*.google.la https://*.google.li https://*.google.lk https://*.google.lt https://*.google.lu https://*.google.lv https://*.google.md https://*.google.me https://*.google.mg https://*.google.mk https://*.google.ml https://*.google.mn https://*.google.ms https://*.google.mu https://*.google.mv https://*.google.mw https://*.google.ne https://*.google.nl https://*.google.no https://*.google.nr https://*.google.nu https://*.google.pl https://*.google.pn https://*.google.ps https://*.google.pt https://*.google.ro https://*.google.rs https://*.google.ru https://*.google.rw https://*.google.sc https://*.google.se https://*.google.sh https://*.google.si https://*.google.sk https://*.google.sm https://*.google.sn https://*.google.so https://*.google.sr https://*.google.st https://*.google.td https://*.google.tg https://*.google.tk https://*.google.tl https://*.google.tm https://*.google.tn https://*.google.to https://*.google.tt https://*.google.vg https://*.google.vu https://*.google.ws https://*.googlesyndication.com https://*.googleadservices.com https://*.google-analytics.com https://*.googlesyndication.com https://*.googletagmanager.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://ads.joomla.org https://*.pingdom.net https://*.twitter.com https://*.twimg.com https://*.facebook.net https://*.facebook.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.wistia.com https://*.wistia.net https://*.litix.io https://*.doubleclick.net https://*.spreadshirt.ie https://*.spreadshirts.net https://*.spreadshirt.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.googlesyndication.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://*.twimg.com https://*.spreadshirt.ie https://unpkg.com; connect-src 'self' https://csi.gstatic.com https://*.googlesyndication.com https://*.pingdom.net https://*.wistia.com https://*.litix.io https://*.doubleclick.net https://*.akamaihd.net https://*.litix.io https://*.google-analytics.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://shop.spreadshirt.ie https://*.spreadshirt.net https://nominatim.openstreetmap.org; frame-src 'self' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://googleads.g.doubleclick.net/ https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.slideshare.net https://*.twimg.com https://*.adfront.org https://*.twitter.com https://*.facebook.net https://*.facebook.com https://*.wistia.com https://*.google.com https://*.googletagmanager.com https://*.youtube.com https://*.slideshare.net https://*.vimeo.com https://*.spreadshirt.ie https://*.spreadshirtsandbox.net/; font-src 'self' data: https://*.googlesyndication.com https://*.gstatic.com https://*.joomla.org https://*.ostraining.com https://ostraining.com https://*.spreadshirt.ie; img-src 'self' https://*.osm.org data: https:; media-src 'self' blob: https://*.googlesyndication.com https://*.akamaihd.net https://*.wistia.net https://*.wistia.com; worker-src 'self' blob: https://*.googlesyndication.com https://*.wistia.com; object-src 'self' https://*.googlesyndication.com https://*.macromedia.com https://embedwistia-a.akamaihd.net https://*.youtube-nocookie.com; frame-ancestors 'self' https://*.joomla.org https://joomla.org.au/; report-uri https://community.joomla.org/scripts/csp-reporter.php?source=community.joomla.org"
+	# The header is unique to every website
+	Header always set Content-Security-Policy "default-src 'self' https://*.joomla.org; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.servedby-buysellads.com https://*.pinterest.com https://*.googletagservices.com https://*.google.ac https://*.google.ad https://*.google.ae https://*.google.al https://*.google.am https://*.google.as https://*.google.at https://*.google.az https://*.google.ba https://*.google.be https://*.google.bf https://*.google.bg https://*.google.bi https://*.google.bj https://*.google.bs https://*.google.bt https://*.google.by https://*.google.ca https://*.google.cat https://*.google.cc https://*.google.cd https://*.google.cf https://*.google.cg https://*.google.ch https://*.google.ci https://*.google.cl https://*.google.cm https://*.google.cn https://*.google.co.ao https://*.google.co.bw https://*.google.co.ck https://*.google.co.cr https://*.google.co.id https://*.google.co.il https://*.google.co.in https://*.google.co.jp https://*.google.co.ke https://*.google.co.kr https://*.google.co.ls https://*.google.co.ma https://*.google.co.mz https://*.google.co.nz https://*.google.co.th https://*.google.co.tz https://*.google.co.ug https://*.google.co.uk https://*.google.co.uz https://*.google.co.ve https://*.google.co.vi https://*.google.co.za https://*.google.co.zm https://*.google.co.zw https://*.google.com https://*.google.com.af https://*.google.com.ag https://*.google.com.ai https://*.google.com.ar https://*.google.com.au https://*.google.com.bd https://*.google.com.bh https://*.google.com.bn https://*.google.com.bo https://*.google.com.br https://*.google.com.bz https://*.google.com.co https://*.google.com.cu https://*.google.com.cy https://*.google.com.do https://*.google.com.ec https://*.google.com.eg https://*.google.com.et https://*.google.com.fj https://*.google.com.gh https://*.google.com.gi https://*.google.com.gt https://*.google.com.hk https://*.google.com.jm https://*.google.com.kh https://*.google.com.kw https://*.google.com.lb https://*.google.com.lc https://*.google.com.ly https://*.google.com.mm https://*.google.com.mt https://*.google.com.mx https://*.google.com.my https://*.google.com.na https://*.google.com.nf https://*.google.com.ng https://*.google.com.ni https://*.google.com.np https://*.google.com.om https://*.google.com.pa https://*.google.com.pe https://*.google.com.pg https://*.google.com.ph https://*.google.com.pk https://*.google.com.pr https://*.google.com.py https://*.google.com.qa https://*.google.com.sa https://*.google.com.sb https://*.google.com.sg https://*.google.com.sl https://*.google.com.sv https://*.google.com.tj https://*.google.com.tr https://*.google.com.tw https://*.google.com.ua https://*.google.com.uy https://*.google.com.vc https://*.google.com.vn https://*.google.cv https://*.google.cz https://*.google.de https://*.google.dj https://*.google.dk https://*.google.dm https://*.google.dz https://*.google.ee https://*.google.es https://*.google.fi https://*.google.fm https://*.google.fr https://*.google.ga https://*.google.ge https://*.google.gf https://*.google.gg https://*.google.gl https://*.google.gm https://*.google.gp https://*.google.gr https://*.google.gy https://*.google.hn https://*.google.hr https://*.google.ht https://*.google.hu https://*.google.ie https://*.google.im https://*.google.io https://*.google.iq https://*.google.is https://*.google.it https://*.google.je https://*.google.jo https://*.google.kg https://*.google.ki https://*.google.kz https://*.google.la https://*.google.li https://*.google.lk https://*.google.lt https://*.google.lu https://*.google.lv https://*.google.md https://*.google.me https://*.google.mg https://*.google.mk https://*.google.ml https://*.google.mn https://*.google.ms https://*.google.mu https://*.google.mv https://*.google.mw https://*.google.ne https://*.google.nl https://*.google.no https://*.google.nr https://*.google.nu https://*.google.pl https://*.google.pn https://*.google.ps https://*.google.pt https://*.google.ro https://*.google.rs https://*.google.ru https://*.google.rw https://*.google.sc https://*.google.se https://*.google.sh https://*.google.si https://*.google.sk https://*.google.sm https://*.google.sn https://*.google.so https://*.google.sr https://*.google.st https://*.google.td https://*.google.tg https://*.google.tk https://*.google.tl https://*.google.tm https://*.google.tn https://*.google.to https://*.google.tt https://*.google.vg https://*.google.vu https://*.google.ws https://*.googlesyndication.com https://*.googleadservices.com https://*.google-analytics.com https://*.googlesyndication.com https://*.googletagmanager.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://ads.joomla.org https://*.pingdom.net https://*.twitter.com https://*.twimg.com https://*.facebook.net https://*.facebook.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.wistia.com https://*.wistia.net https://*.litix.io https://*.doubleclick.net https://*.spreadshirt.ie https://*.spreadshirts.net https://*.spreadshirt.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.googlesyndication.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://*.twimg.com https://*.spreadshirt.ie https://unpkg.com; connect-src 'self' https://*.buysellads.com https://csi.gstatic.com https://*.googlesyndication.com https://*.pingdom.net https://*.wistia.com https://*.litix.io https://*.doubleclick.net https://*.akamaihd.net https://*.litix.io https://*.google-analytics.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://shop.spreadshirt.ie https://*.spreadshirt.net https://nominatim.openstreetmap.org; frame-src 'self' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.buysellads.net https://googleads.g.doubleclick.net/ https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.slideshare.net https://*.twimg.com https://*.adfront.org https://*.twitter.com https://*.facebook.net https://*.facebook.com https://*.wistia.com https://*.google.com https://*.googletagmanager.com https://*.youtube.com https://*.slideshare.net https://*.vimeo.com https://*.spreadshirt.ie https://*.spreadshirtsandbox.net/; font-src 'self' data: https://*.googlesyndication.com https://*.gstatic.com https://*.joomla.org https://*.ostraining.com https://ostraining.com https://*.spreadshirt.ie; img-src 'self' https://*.osm.org data: https:; media-src 'self' blob: https://*.googlesyndication.com https://*.akamaihd.net https://*.wistia.net https://*.wistia.com; worker-src 'self' blob: https://*.googlesyndication.com https://*.wistia.com; object-src 'self' https://*.googlesyndication.com https://*.macromedia.com https://embedwistia-a.akamaihd.net https://*.youtube-nocookie.com; frame-ancestors 'self' https://*.joomla.org https://joomla.org.au/; report-uri https://community.joomla.org/scripts/csp-reporter.php?source=community.joomla.org"
 </IfModule>
+
 ## Since Joomla 3.9.21
 ## Disable inline JavaScript when directly opening SVG files or embedding them with the object-tag
 <FilesMatch "\.svg$">
@@ -443,5 +593,13 @@ deny from 109.105.64.25
     Header always set Content-Security-Policy "script-src 'none'"
   </IfModule>
 </FilesMatch>
-##################### Security Header #####################
+###########################################
 
+###########################################
+# ======= Joomla! core SEF Section. =======
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{REQUEST_URI} !^/index\.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+###########################################
