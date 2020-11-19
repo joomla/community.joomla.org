@@ -1,5 +1,6 @@
 /*SOBIPRO DEFAULTS CSS */
-iframe,svg{max-width:inherit}
+iframe{max-width:100%}
+svg{max-width:inherit}
 .modal-backdrop{background-color:#933}
 .SobiPro .input-splarge{width:400px}
 .SobiPro .hide{display:none}
@@ -292,6 +293,26 @@ iframe,svg{max-width:inherit}
 .SobiPro .form-group.cf-radio label,.SobiPro .form-group.cf-checkbox label {float: left;margin-top: 6px;padding-right: 10px;}
 .SobiPro .form-group.cf-radio input {width: inherit;}
 .SobiPro .form-group.cf-radio {margin-bottom: 5px;}
+/*ACY DEFAULT CSS - LOAD FIRST FOR OVERRIDE FURTHER DOWN*/
+/*div.acymailing_module,.acymailing_module div{padding:0!important;margin:0!important;border-style:none!important}*/
+table.acymailing_form{margin:auto;border:0!important}
+a.acymailing_togglemodule{display:block;font-size:16px}
+.acymailing_mootoolsbutton p{text-align:center}
+.acysubbuttons{text-align:center}
+img.captchaimagemodule{border:1px solid #ddd;float:left}
+.captchakeymodule .captchafield{margin-top:3px;margin-left:2px}
+.acymailing_fulldiv tr,.acymailing_fulldiv td{border:0}
+.acymailing_module_form select{display:block;margin-left:auto;margin-right:auto}
+.acymailing_module_form td{padding-bottom:5px;vertical-align:top}
+div.acymailing_module_error{color:#400;background-color:#fdd;padding:1em!important;margin-bottom:10px}
+div.acymailing_module_success{color:#130;background-color:#dfc;padding:1em!important;z-index:10;margin-bottom:10px}
+.acymailing_module_form .acymailing_introtext{padding-bottom:10px;display:block}
+.refreshCaptchaModule{background-image:url(../images/refresh.png);width:16px;height:16px;display:block;float:left;cursor:pointer}
+.acymailing_module fieldset{border:solid 1px #ccc;padding:5px}
+.category_warning{color:red}
+.acymailing_fulldiv a.modal{position:static!important;margin:0!important;width:auto!important;display:inline!important}
+.hide{display:none}
+/*END ACY*/
 /*template*/
 body.site{background-color:#fff;}
 .body .container {background-color: transparent; border: 0; border-radius: 0; box-shadow:none;}
@@ -371,6 +392,7 @@ div#field_location-container {clear: both;}
 div#field_your_photo-input-container {display: inline-block;margin-left: 20px;}
 .itemid-273 .SobiPro .spEntryEdit .required-message {margin-left: 220px!important;}
 .itemid-273 .submit-captcha {margin-left: 220px;}
+.itemid-273 .g-recaptcha {margin-left:0px; margin-bottom:20px;}
 div#field_terms {width: 60%;}
 input#field_terms_terms-yes {width: 14px;}
 /*Events Sobi Tweaks*/
@@ -423,6 +445,7 @@ th.event-num {width: 4%;}
 th.event-web {width: 15%;}
 /*Mascot*/
 .itemid-634 .spEntryEdit label.control-label {  float: none;  padding-top: 10px;  margin-left: 0px;  text-align: left;  width: 100%;}
+.itemid-634 .g-recaptcha {margin-left:0px;}
 .itemid-635 .spClassViewImage { display: inline-block; width: 31%; padding-right:2%}
 /*Page title*/
 .page-title{font-family: 'Open Sans', sans-serif;}
@@ -595,12 +618,6 @@ div#form-login-submit.sub-left {
 .com-rsticketspro-submit-ticket .radio.btn-group input[type="radio"] {
 	display:block;
 }
-/* Hide department, subject, priority in Forum Support */
-.itemid-1832 .com-rsticketspro-submit-ticket #rst_department_container,
-.itemid-1832 .com-rsticketspro-submit-ticket #rst_subject_container,
-.itemid-1832 .com-rsticketspro-submit-ticket #rst_priority_container{
-	display:none;
-}
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1200px){
@@ -629,9 +646,11 @@ input#modlgn-username,input#modlgn-passwd {width: 85%;}
 div#aside {padding-top: 15px;}
 .btn-large {font-size:14px; padding:10px 10px;}
 .report-listing {width: 82%;}
+/*div#ftr-ContSubmit {margin: 0px 20px 0 15%;}*/
 }
 @media only screen and (min-width: 768px) and (max-width: 979px){
 #userForm.formResponsive input[type="text"],.formResponsive textarea {width: 97%;}
+#g-recaptcha-23, #g-recaptcha-31,#g-recaptcha-41 {margin-left: 0;}
 input#modlgn-username, input#modlgn-passwd {width: 80%!important;}
 form#login-form ul.unstyled {font-size: 12px;}
 .span12.spCaticon h3 {font-size: 13px;font-weight: 400;}
@@ -651,7 +670,9 @@ form#login-form ul.unstyled {font-size: 12px;}
 div#field_your_photo-input-container {display: block;margin-left: 0px;}
 .itemid-273 .SobiPro .spEntryEdit .required-message {margin-left: 0px!important;}
 .itemid-273 .submit-captcha {margin-left: 0px;}
+.itemid-273 .g-recaptcha {margin-left:0px; margin-bottom:20px;}
 div#field_terms {width: 100%;}
+/*div#ftr-ContSubmit {margin: 0px 20px 0 13}*/
 .SobiPro .spCalDayHead .navbar-inner { color: #000;}
 .spCalDayHead ul.nav {padding-top: 10px;}
 .SpCalEntry {padding: 10px 0px;}
@@ -663,28 +684,40 @@ a.btn.button.bigorange {margin-bottom: 10px;}
 
 @media only screen and (min-width: 481px) and (max-width: 767px){
 .nav-tabs > li,  li#item-199, .nav-tabs > li, .nav-pills > li.item-192 {float: left;}
+#g-recaptcha-23,#g-recaptcha-31, #g-recaptcha-41 {margin-left: 0;}
 .itemid-200 .span3{float: left; margin-right: 1%; width: 48%;}
 .nav-pills > li > a {padding-left: 8px; padding-right: 8px;}
 .span3.spCat {width: 48%!important;float: left!important;}
 .span9.spCatname {padding-left:0px;}
 span.spEntryCount {display: block;}
 }
+/*@media (max-width:680px){
+.subnav-wrapper .subnav .container{width:70%;box-sizing:border-box;margin:0;position:relative;display:inline-block;padding:0;float:left;}
+}*/
 @media only screen and (max-width: 480px){
 .nav-pills > li.item-199,  .nav-pills > li.item-192 {float: left;}
 .nav > li > a > img,.bannergm{display: none;}
+#g-recaptcha-23, #g-recaptcha-31,#g-recaptcha-41{margin-left:-25px; -webkit-transform:scale(0.70); -ms-transform:scale(0.70); transform:scale(0.70);}
  .bannerpm{display:block; margin-top:30px;}
 .nav-pills > li > a {padding-left: 8px; padding-right: 8px;}
 .span3.spCat {width: 48%!important;float: left!important;}
 .span9.spCatname {padding-left:0px;}
 span.spEntryCount {display: block;}
 li.item-136, li.item-426 {display: none;}
+/*div#ftr-ContSubmit {margin: 0 0 0 0;}
+div#ftr-button12 {padding-left: 10px;}*/
+.g-recaptcha {margin-left: 0px;}
 .SobiPro .mapOr {text-align: center;display: block;}
 .SobiPro .ctrl-map.label,.SobiPro .ctrl-locate-me.btn {padding-right: 0;padding-left: 0;}
 .SobiPro .mapSearch,.SobiPro .ctrl-map,.SobiPro .ctrl-locate-me.btn {width: 100%;}
 }
-/* Ads joomla org */
-.custom.ad-respond {width: 350px;height: 310px;}
-div#sa_ads6 {height: 300px;}
+@media only screen and (max-width:425px) {
+/*div#ftr-ContSubmit, div#ftr-button12 {display:block; margin-bottom:20px;}
+div#ftr-button12 {padding-left:0px;}*/
+}
+@media only screen and (max-width: 380px){
+.g-recaptcha {-webkit-transform:scale(0.77);transform:scale(0.77);-webkit-transform-origin:0 0;transform-origin:0 0;}
+}
 
 /* Mod_Menu Styling - Added 2020-07-13*/
 .subnav .nav-pills {
@@ -704,4 +737,159 @@ div#sa_ads6 {height: 300px;}
 
 nav.subnav-wrapper li.dropdown.parent:hover > ul.dropdown-menu {
   display:block
+}
+
+/* Special div for around Google Docs Iframes - Added 2020-09-05*/
+.google-slides-container{
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    overflow: hidden;
+}
+
+.google-slides-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* RSDirectory - Added 2020-11-06 */
+body.com_rsdirectory .rsdir-service-providers .page-header {
+	border: 0 none;
+}
+body.com_rsdirectory .rsdir-service-providers .page-header h2 {
+	color: #152845;
+	font-weight: normal;
+	font-size: 1.4rem;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+/* Category listing */
+.rsdir-categories--service-providers .rsdir-categories-list .media {
+	display: flex;
+	margin: 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.rsdir-categories--service-providers .rsdir-categories-list .media .media-body {
+	min-height: unset !important;
+	width: auto !important;
+	display: flex;
+	flex-basis: 30%;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	background: none;
+	margin: 0;
+	float: none;
+	border-radius: 0;
+	border-bottom: 5px solid #184d81 !important;
+	color: #184d81;
+	border: 1px solid #ccc;
+}
+
+.rsdir-categories--service-providers .rsdir-categories-list .media .media-body h5 {
+	margin: 10px;
+	font-weight: normal;
+	padding: 10px;
+	text-align: center;
+	background: none !important;
+	color: #184d81;
+}
+
+.rsdir-categories--service-providers .rsdir-categories-list .media .media-body h5 a,
+.rsdir-categories--service-providers .rsdir-categories-list .media .media-body h5 i {
+    color: #152845;
+}
+
+.rsdir-categories--service-providers .rsdir-categories-list i.fa {
+	display: block;
+	font-size: 40px;
+	margin-bottom: 10px;
+	color: #184d80 !important;
+}
+
+/* Company Listing */
+.rsdir-service-providers .rsdir-listing {
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+	border-bottom: 5px solid #184d81;
+}
+
+.rsdir-service-providers .rsdir-listing .thumbnail {
+	border: 0 none;
+	box-shadow: none;
+}
+
+.rsdir-service-providers .rsdir-listing-title {
+	font-weight: normal;
+	font-size: 1.4rem;
+	margin-top: 0;
+}
+
+.rsdir-service-providers .rsdir-listing-title a {
+	color: #152845;
+}
+
+.rsdir-service-providers .rsdir-listing-promoted {
+	background: none;
+}
+
+/* Entry */
+.rsdir-service-providers .rsdir-detail-section-title,
+.rsdir-service-providers-addentry .rsdir-detail-section-title {
+  display:none;
+}
+
+.rsdir-service-providers.item-page{
+	margin-bottom: 30px;
+	padding: 10px;
+	border: 1px solid #ccc;
+        border-bottom: 5px solid #184d81 !important;
+}
+
+.rsdir-service-providers.item-page > .row-fluid > .span12 > .clearfix {
+	float: right;
+}
+
+/* Promoted Entries */
+.rsdir-service-providers .rsdir-promoted-entries .thumbnail {
+	display: inline-block;
+	max-width: 100% !important;
+	border-bottom: 5px solid #184d81;
+	border-radius: 0;
+}
+
+.rsdir-service-providers .rsdir-top-entry.label.label-info,
+.rsdir-service-providers .rsdir-promoted-entries .thumbnail a span.label {
+	background: #142643;
+	border-radius: 3px;
+	padding: 4px 10px !important;
+	text-shadow: none;
+}
+
+.rsdir-service-providers .rsdir-listing-promoted .rsdir-listing-detail-part > .clearfix {
+	float: right;
+}
+
+/* Add Entry */
+[class*="rsdir-service-providers"] .radio.btn-group input[type="radio"] {
+  display: block;
+}
+
+[class*="rsdir-service-providers"] fieldset.radio.btn-group {
+  padding-left: 20px;
+}
+/* Map-Radius-Search */
+div.rsdir-service-providers-mapsearch #rsdir-radius-search > fieldset:nth-child(1) > legend:nth-child(1) {
+    display:none;
+}
+div.rsdir-service-providers-mapsearch #rsdir-radius-search > fieldset:nth-child(2) > legend:nth-child(1) {
+  margin-bottom: 0px;
 }
