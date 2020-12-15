@@ -1004,3 +1004,10 @@ body.com_rsdirectory.view-myentries .moduletable.rsdir-filter-module {
 	flex-basis: 100%;
   }
 }
+
+/* mod_menu active styles 2020-12-15 */
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+	color: #005580;
+	cursor: pointer;
+	background-color: #eeeeee;
+}
