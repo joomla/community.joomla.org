@@ -887,9 +887,120 @@ body.com_rsdirectory .rsdir-service-providers .page-header h2 {
   padding-left: 20px;
 }
 /* Map-Radius-Search */
-div.rsdir-service-providers-mapsearch #rsdir-radius-search > fieldset:nth-child(1) > legend:nth-child(1) {
+
+.rsdir-service-providers-mapsearch {
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+	border-bottom: 5px solid #184d81;
+}
+
+.rsdir-service-providers-mapsearch h1 {
+	color: #152845;
+	font-weight: normal;
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+.rsdir-service-providers-mapsearch #rsdir-radius-search > fieldset > legend {
+  display: none;
+}
+
+.rsdir-service-providers-mapsearch input#rsdir-location {
+	width: 206px;
+}
+
+.rsdir-service-providers-mapsearch .rsdir-filter-19.control-group {
+	margin-top: 0;
+}
+
+.rsdir-service-providers-mapsearch .rsdir-filter-caption {
+	font-weight: normal;
+}
+
+.rsdir-service-providers-mapsearch .thumbnail {
+	max-width: 150px;
+	background: white;
+	border: 0 none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.rsdir-service-providers-mapsearch .rsdir-info-window.media {
+	text-align: center;
+}
+
+.rsdir-service-providers-mapsearch .rsdir-info-window.media .thumbnail {
+	margin: 0;
+	border: 0 none;
+	max-width: 80px !important;
+	float: none;
+	display: inline-block;
+	box-shadow: none;
+    border-radius: 0;
+}
+
+.rsdir-service-providers-mapsearch .rsdir-filter.rsdir-filter-13.control-group {
     display:none;
 }
-div.rsdir-service-providers-mapsearch #rsdir-radius-search > fieldset:nth-child(2) > legend:nth-child(1) {
-  margin-bottom: 0px;
+
+/* rsdir filter module */
+body.com_rsdirectory.view-myentries .moduletable.rsdir-filter-module {
+	display: none;
+}
+
+.moduletable.rsdir-filter-module > .rsdir {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-bottom: 5px solid #184d81 !important;
+}
+
+.moduletable.rsdir-filter-module form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+}
+
+.moduletable.rsdir-filter-module form .control-group {
+	flex-basis: 50%;
+	padding: 5px;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.moduletable.rsdir-filter-module .rsdir-filter-status {
+	display: none;
+}
+
+.moduletable.rsdir-filter-module .rsdir-filter-form .rsdir-textbox {
+	max-width: calc(100% - 14px);
+}
+
+.moduletable.rsdir-filter-module form button {
+	margin: 5px;
+}
+
+.moduletable.rsdir-filter-module .chzn-container {
+	width: 100% !important;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	padding: 1px 6px 2px 6px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	min-height: 32px !important;
+}
+
+.moduletable.rsdir-filter-module .chzn-container ul {
+	border: 0 none;
+	box-shadow: none;
+	background: none;
+}
+
+@media (max-width: 550px){
+  .moduletable.rsdir-filter-module form .control-group {
+	flex-basis: 100%;
+  }
 }
