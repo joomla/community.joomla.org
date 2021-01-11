@@ -943,7 +943,7 @@ body.com_rsdirectory .rsdir-service-providers .page-header h2 {
 }
 
 .rsdir-service-providers-mapsearch .rsdir-filter.rsdir-filter-13.control-group {
-    display:none;
+    display: none;
 }
 
 /* rsdir filter module */
@@ -1007,7 +1007,34 @@ body.com_rsdirectory.view-myentries .moduletable.rsdir-filter-module {
 
 /* mod_menu active styles 2020-12-15 */
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-	color: #005580;
-	cursor: pointer;
-	background-color: #eeeeee;
+    color: #005580;
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+/* DPCalendar */
+/* JUG Facebook, Twitter, Website URL & Logo style */
+dl.dp-description.dp-field-facebook-page,
+dl.dp-description.dp-field-twitter-page,
+dl.dp-description.dp-field-instagram-page,
+dl.dp-description.dp-field-meetup-page,
+dl.dp-description.dp-field-website-page {
+	float: left;
+	margin-right: 5px;
+}
+dl.dp-description.dp-field-facebook-page dt.dp-description__label,
+dl.dp-description.dp-field-twitter-page dt.dp-description__label,
+dl.dp-description.dp-field-instagram-page dt.dp-description__label,
+dl.dp-description.dp-field-meetup-page dt.dp-description__label,
+dl.dp-description.dp-field-website-page dt.dp-description__label,
+dl.dp-description.dp-field-jug-logo  dt.dp-description__label {
+	width: 0;
+}
+dl.dp-description.dp-field-facebook-page dd.dp-description__description, 
+dl.dp-description.dp-field-twitter-page dd.dp-description__description,
+dl.dp-description.dp-field-instagram-page dd.dp-description__description,
+dl.dp-description.dp-field-meetup-page dd.dp-description__description,
+dl.dp-description.dp-field-website-page dd.dp-description__description,
+dl.dp-description.dp-field-jug-logo dd.dp-description__description {
+	margin-left: 0;
 }
