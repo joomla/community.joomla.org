@@ -1038,3 +1038,16 @@ dl.dp-description.dp-field-website-page dd.dp-description__description,
 dl.dp-description.dp-field-jug-logo dd.dp-description__description {
 	margin-left: 0;
 }
+
+.com-dpcalendar-locations .dp-location-group {
+	margin-bottom: 10px;
+}
+
+.com-dpcalendar-locations .dp-heading {
+	margin-bottom: 5px;
+}
+
+.com-dpcalendar-locations .dp-heading a {
+	font-weight: normal;
+	font-size: 0.95rem;
+}
