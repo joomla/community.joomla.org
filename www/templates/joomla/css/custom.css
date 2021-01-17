@@ -1039,8 +1039,16 @@ dl.dp-description.dp-field-jug-logo dd.dp-description__description {
 	margin-left: 0;
 }
 
+.com-dpcalendar-locations .com-dpcalendar-locations-limited__details {
+	display: inline-block;
+	grid-template-columns: unset;
+	column-count: 4;
+	column-width: 200px;
+}
+
 .com-dpcalendar-locations .dp-location-group {
 	margin-bottom: 10px;
+	break-inside: avoid;
 }
 
 .com-dpcalendar-locations .dp-heading {
