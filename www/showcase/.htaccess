@@ -1,0 +1,3 @@
+RewriteEngine On
+# Forward /showcase to showcase.joomla.org
+RewriteRule ^(.*)$ https://showcase.joomla.org/$1 [R=301,L]
