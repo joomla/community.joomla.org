@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+    <channel>
+        <title>This feed is no longer in use</title>
+        <description>This feed is no longer in use.</description>
+        <link>https://www.joomla.org/rss-news-feeds.html</link>
+        <atom:link href="https://community.joomla.org/not-used-feeds.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>This feed is no longer in use</title>
+            <pubDate>Wed, 1 Jan 2020 00:00:00 +0000</pubDate>
+            <link>https://www.joomla.org/rss-news-feeds.html</link>
+            <guid isPermaLink="true">https://www.joomla.org/rss-news-feeds.html</guid>
+            <description>
+                <![CDATA[ <p>This feed is no longer in use.</p>]]>
+            </description>
+        </item>     
+    </channel>
+</rss>
