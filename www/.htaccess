@@ -252,12 +252,13 @@ RewriteRule ^translations/joomla-3-translations/[0-9]{1,6}-(.*)$ https://communi
 RewriteRule index\.php\.html index.php [NC,R]
 
 #Historical Bulk Redirects#
-RewriteRule ^component/planet(.*) /connect.html? [R=301,L]
-RewriteRule ^connect/(.*) /connect.html? [R=301,L]
+RewriteRule ^connect.*$ https://community.joomla.org/blogs.html [L,R=301]
+RewriteRule ^component/planet(.*) /blogs.html? [R=301,L]
+RewriteRule ^connect/(.*) /blogs.html? [R=301,L]
 RewriteRule ^user-groups/search-by(.*) /user-groups/find-a-user-group.html? [R=301,L]
 RewriteRule ^comments/(.*) https://community.joomla.org? [R=301,L]
 RewriteRule ^team-blogs/(.*) https://community.joomla.org/blogs.html? [R=301,L]
-RewriteRule ^connect/en/(.*) https://community.joomla.org/connect.html? [R=301,L]
+RewriteRule ^connect/en/(.*) https://community.joomla.org/blogs.html? [R=301,L]
 RewriteRule ^contributor-blogs(.*) https://community.joomla.org/blogs.html? [R=301,L]
 RewriteRule ^component/zine/(.*) https://community.joomla.org? [R=301,L]
 RewriteRule ^labels/(.*) https://community.joomla.org/tags? [R=301,L]
@@ -735,8 +736,6 @@ RewriteRule ^sitemap.xml$ - [L]
 RewriteRule ^googlecaed8dd1896fda3b.html$ - [L]
 ## Explicitly allow access to the site's favicon.ico file
 RewriteRule ^favicon.ico$ - [L]
-## Explicitly allow access to the site's favicon.ico file
-RewriteRule ^connect-feed.xml$ - [L]
 ## Explicitly allow access to the site's favicon.ico file
 RewriteRule ^not-used-feeds.xml$ - [L]
 ## Disallow access to all other PHP files throughout the site, unless they are explicitly allowed
