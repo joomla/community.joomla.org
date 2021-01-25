@@ -61,80 +61,6 @@ Redirect 301 /user-groups/south-america/chile/1030-joomla-user-comunidad-en-iqui
 Redirect 301 /user-groups/871-joomla-user-group-minsk.html https://community.joomla.org/user-groups.html
 Redirect 301 /user-groups/europe/belarus/871-joomla-user-group-minsk.html https://community.joomla.org/user-groups.html
 
-# Redirect JUG pages - General things
-Redirect 301 /user-groups/1058-unpublished.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/find-a-user-group.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/rules-and-faqs/article/jug-faqs-and-rules-for-submission.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/germany/983-joomla-user-group-friedrichshafen.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/netherlands/1014-joomla-user-group-amsterdam.html https://community.joomla.org/user-groups.html
-
-Redirect 301 /user-groups/africa.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/3926-namibia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/algeria.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/benin.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/burkina-faso.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/kenya.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/liberia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/nigeria.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/south-africa.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/uganda.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/bangladesh.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/india.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/malaysia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/sri-lanka.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/taiwan.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/thailand.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/asia/turkey.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/caribbean.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/caribbean/dominican-republic.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/caribbean/st-martin.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/austria.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/belarus.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/belgium.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/bosnia-and-herzegovina.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/denmark.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/france.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/germany.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/greece.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/hungary.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/italy.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/netherlands.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/norway.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/poland.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/russian-federation.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/serbia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/spain.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/sweden.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/switzerland.html https://community.joomla.org/user-groups.html
-Redirect 301 user-groups/europe/united-kingdom.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east/3910-saudi-arabia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east/3932-egypt.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east/iran.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east/jordan.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/middle-east/israel.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/north-america.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/north-america/united-states.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/north-america/canada.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/oceania.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/oceania/australia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america/argentina.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america/brazil.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america/chile.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america/columbia.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/south-america/ecuador.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/africa/3733-senegal.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/italy/3415-joomla-user-group-milano-centro.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/italy/949-joomla-user-group-firenze.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/italy/953-joomla-user-group-portogruaro.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/spain/4117-joomla-user-group-almeria-virtual.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/netherlands/1008-joomla-user-group-maastricht.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/europe/spain/938-joomla-user-group-sevilla.html https://community.joomla.org/user-groups.html
-Redirect 301 /user-groups/north-america/united-states/912-joomla-user-group-bridgeport-connecticut.html https://community.joomla.org/user-groups.html
-
 # Redirect JUG pages - Specific things
 Redirect 301 /user-groups/europe/netherlands/1007-joomla-user-group-s-hertogenbosch.html https://community.joomla.org/user-groups/joomla-user-group-s-hertogenbosch.html
 Redirect 301 /user-groups/europe/netherlands/1006-joomla-user-group-utrecht.html https://community.joomla.org/user-groups/joomla-user-group-utrecht.html
@@ -255,6 +181,49 @@ Redirect 301 /user-groups/south-america/brazil/4048-jug-belem.html https://commu
 Redirect 301 /user-groups/south-america/columbia/1244-joomla-user-group-bogota.html https://community.joomla.org/user-groups/joomla-user-group-bogota.html
 Redirect 301 /user-groups/south-america/ecuador/1017-joomla-user-group-guayaquil.html https://community.joomla.org/user-groups/joomla-user-group-guayaquil.html
 
+# Redirect JUG pages - General things
+Redirect 301 /user-groups/1058-unpublished.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/find-a-user-group.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/rules-and-faqs/article/jug-faqs-and-rules-for-submission.html https://community.joomla.org/user-groups.html
+RewriteRule ^user-groups/list.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/europe.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/africa.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/asia.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/asia-pacific.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/caribbean.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/middle-east.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/north-america.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/oceania.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/south-america.*$ https://community.joomla.org/user-groups.html [L,R=301]
+RewriteRule ^user-groups/colombia.*$ https://community.joomla.org/user-groups.html [L,R=301]
+
+# From com_redirect
+Redirect 301 /user-groups/935-joomla-user-group-vigo.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/7-europe.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/1014-joomla-user-group-amsterdam.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/984-joomla-user-group-cologne.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/182-united-states.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/923-joomla-user-group-aarhus.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/881-joomla-user-group-sydney.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/3388-jug-dresden.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/47-germany.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/1049-joomla-user-group-bangalore.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/897-joomla-user-group-dallas-fort-worth.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/1032-grupo-de-uusarios-joomla-region-metropolitana.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/995-joomla-user-group-north-west.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/1008-joomla-user-group-maastricht.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/875-joomla-user-group-silesia.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/find-a-user-group/search/results.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/162-serbia.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/3419-joomla-user-group-breizh.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/890-tel-aviv-jug.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/220-brazil.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/50-taiwan.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/70-uganda.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/972-joomla-user-groups-tarbes.html https://community.joomla.org/user-groups.html
+Redirect 301 /user-groups/966-joomla-user-group-lille.html https://community.joomla.org/user-groups.html
+
+
 RewriteRule ^blogs/community/[0-9]{1,6}-(.*)$ https://community.joomla.org/blogs/community/$1 [L,R=301]
 RewriteRule ^blogs/leadership/[0-9]{1,6}-(.*)$ https://community.joomla.org/blogs/leadership/$1 [L,R=301]
 RewriteRule ^gsoc2009/andrea-tarr/[0-9]{1,6}-(.*)$ https://community.joomla.org/gsoc2009/andrea-tarr/$1 [L,R=301]
@@ -281,7 +250,6 @@ RewriteRule ^translations/joomla-1-5-translations/[0-9]{1,6}-(.*)$ https://commu
 RewriteRule ^translations/joomla-2-5-translations/[0-9]{1,6}-(.*)$ https://community.joomla.org/translations/joomla-2-5-translations/$1 [L,R=301]
 RewriteRule ^translations/joomla-3-translations/[0-9]{1,6}-(.*)$ https://community.joomla.org/translations/joomla-3-translations/$1 [L,R=301]
 RewriteRule index\.php\.html index.php [NC,R]
-
 
 #Historical Bulk Redirects#
 RewriteRule ^component/planet(.*) /connect.html? [R=301,L]
