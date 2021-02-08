@@ -1,0 +1,45 @@
+##Please don't remove folders from disallow.  
+##The allows at the top allow any of the mimetypes listed to be crawled within any folder
+##using long-tail wildcards, these ignore the disallows for the folders below.
+##This gives full render for the search engines whilst preventing full crawls of system 
+##folders.  The images folder is allowed to allow twitter/facebook sharing of images.
+User-agent: *
+#THIS ALLOWS FULL RENDER AT ENGINES
+Allow: /*.js***************
+Allow: /*.css**************
+Allow: /*.png**************
+Allow: /*.jpg**************
+Allow: /*.jpeg**************
+Allow: /*.gif**************
+Allow: /*.eot**************
+Allow: /*.woff**************
+Allow: /*.ttf**************
+Allow: /*.svg**************
+Allow: /*.otf**************
+Allow: /*.pdf**************
+Allow: /*.PNG**************
+Allow: /*.JPG**************
+Allow: /*.JPEG**************
+#THESE FOLDERS SHOULD NEVER BE CRAWLED
+Disallow: /*?start=
+Disallow: /*?limitstart=
+Disallow: /*?site=
+Disallow: /*?ostm_view=
+Disallow: /administrator/
+Disallow: /bin/
+Disallow: /cache/
+Disallow: /cgi-bin/
+Disallow: /cli/
+
+Disallow: /includes/
+Disallow: /language/
+Disallow: /layouts/
+Disallow: /libraries/
+
+
+
+
+Disallow: /tmp/
+Disallow: /videos/
+# JSitemap entries
+Sitemap: https://community.joomla.org/index.php?option=com_jmap&view=sitemap&format=xml
