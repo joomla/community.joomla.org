@@ -37,4 +37,4 @@ Disallow: /libraries/
 Disallow: /tmp/
 Disallow: /videos/
 # JSitemap entries
-Sitemap: https://community.joomla.org/index.php?option=com_jmap&view=sitemap&format=xml
+Sitemap: https://community.joomla.org/sitemap
