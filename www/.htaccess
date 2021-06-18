@@ -198,6 +198,75 @@ RewriteRule ^user-groups/oceania.*$ https://community.joomla.org/user-groups.htm
 RewriteRule ^user-groups/south-america.*$ https://community.joomla.org/user-groups.html [L,R=301]
 RewriteRule ^user-groups/colombia.*$ https://community.joomla.org/user-groups.html [L,R=301]
 
+# Translations Redirect
+Redirect 301 /translations/joomla-1-5-translations/croatian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-croatian
+Redirect 301 /translations/joomla-1-5-translations/czech-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-czech
+Redirect 301 /translations/joomla-1-5-translations/danish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-danish
+Redirect 301 /translations/joomla-1-5-translations/dutch-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-dutch
+Redirect 301 /translations/joomla-1-5-translations/afrikaans-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-afrikaans
+Redirect 301 /translations/joomla-1-5-translations/albanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-albanian
+Redirect 301 /translations/joomla-1-5-translations/arabic-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-arabic-unitag
+Redirect 301 /translations/joomla-1-5-translations/bosnian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-bosnian
+Redirect 301 /translations/joomla-1-5-translations/bulgarian-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-bulgarian
+Redirect 301 /translations/joomla-1-5-translations/catalan-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-catalan
+Redirect 301 /translations/joomla-1-5-translations/english-usa-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-english-us
+Redirect 301 /translations/joomla-1-5-translations/esperanto-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-esperanto
+Redirect 301 /translations/joomla-1-5-translations/estonian-translation-team.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-estonian
+Redirect 301 /translations/joomla-1-5-translations/french-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-french
+Redirect 301 /translations/joomla-1-5-translations/german-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-german
+Redirect 301 /translations/joomla-1-5-translations/hebrew-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-hebrew
+Redirect 301 /translations/joomla-1-5-translations/hungarian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-hungarian
+Redirect 301 /translations/joomla-1-5-translations/indonesian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-indonesian
+Redirect 301 /translations/joomla-1-5-translations/khmer-cambodia-translation-team.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-khmer
+Redirect 301 /translations/joomla-1-5-translations/laotian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-laotian
+Redirect 301 /translations/joomla-1-5-translations/latvian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-latvian
+Redirect 301 /translations/joomla-1-5-translations/macedonian-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-macedonian
+Redirect 301 /translations/joomla-1-5-translations/mongolian-mongolia-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-mongolian
+Redirect 301 /translations/joomla-1-5-translations/norwegian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-norwegian
+Redirect 301 /translations/joomla-1-5-translations/persian-farsi-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-persian-farsi
+Redirect 301 /translations/joomla-1-5-translations/polish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-polish
+Redirect 301 /translations/joomla-1-5-translations/portuguese-brazil-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-portuguese-brazil
+Redirect 301 /translations/joomla-1-5-translations/portuguese-portugal-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-portuguese-portugal
+Redirect 301 /translations/joomla-1-5-translations/romanian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-romanian
+Redirect 301 /translations/joomla-1-5-translations/russian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-russian
+Redirect 301 /translations/joomla-1-5-translations/slovak-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-slovak
+Redirect 301 /translations/joomla-1-5-translations/slovenian-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-slovenian
+Redirect 301 /translations/joomla-1-5-translations/spanish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-spanish
+Redirect 301 /translations/joomla-1-5-translations/swedish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-swedish
+Redirect 301 /translations/joomla-1-5-translations/tamil-india-translation.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-tamil-india
+Redirect 301 /translations/joomla-1-5-translations/thai-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-thai
+Redirect 301 /translations/joomla-1-5-translations/turkish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-turkish
+Redirect 301 /translations/joomla-1-5-translations/ukrainian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-ukrainian
+RewriteRule ^translations/joomla-1-5-translations.*$ https://downloads.joomla.org/language-packs/translations-joomla15 [L,R=301]
+#https://community.joomla.org/translations/joomla-1-5-translations/chinese-simplified-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/chinese-traditional-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/dari-afghanistan-translation-team.html
+#https://community.joomla.org/translations/joomla-1-5-translations/finnish-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/galician-translation-team.html
+#https://community.joomla.org/translations/joomla-1-5-translations/georgian-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/greek-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/gujarati-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/hindi-india-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/icelandic-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/italian-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/japanese-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/azeriazerbaijani-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/belarusian-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/bengali-bangladesh-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/lithuanian-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/malay-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/malayalam-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/montenegrin-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/dari-afghanistan-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/serbian-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/sindhi-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/sinhala-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/syriac-east-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/tagalog-philippines-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/tamil-sri-lanka-translation-community.html
+#https://community.joomla.org/translations/joomla-1-5-translations/urdu-translation.html
+#https://community.joomla.org/translations/joomla-1-5-translations/vietnamese-translation-community.html
+
 # From com_redirect
 Redirect 301 /user-groups/935-joomla-user-group-vigo.html https://community.joomla.org/user-groups.html
 Redirect 301 /user-groups/7-europe.html https://community.joomla.org/user-groups.html
