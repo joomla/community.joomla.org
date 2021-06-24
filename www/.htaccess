@@ -47,7 +47,9 @@ Redirect 301 /sitemap.xml https://community.joomla.org/index.php?option=com_jmap
 Redirect 301 /translations/typical-language-file-headers.html https://docs.joomla.org/Translation_of_Language_Packs
 Redirect 301 /translations/joomla-project-translation-and-localization-policy.html https://docs.joomla.org/Translation_of_Language_Packs
 Redirect 301 /translations/joomla-3-translations/about-translation-3x.html https://docs.joomla.org/Translation_of_Language_Packs
+Redirect 301 /community-2017.html https://community.joomla.org/donate
 RewriteRule ^component/jdonation/community-wide.*$ https://community.joomla.org/sponsorship-campaigns.html [L,R=301]
+
 
 # Redirect JUG pages - Temporary until published
 Redirect 301 /user-groups/860-joomla-user-group-taichung.html https://community.joomla.org/user-groups.html
