@@ -240,34 +240,151 @@ Redirect 301 /translations/joomla-1-5-translations/thai-translation-community.ht
 Redirect 301 /translations/joomla-1-5-translations/turkish-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-turkish
 Redirect 301 /translations/joomla-1-5-translations/ukrainian-translation-community.html https://downloads.joomla.org/language-packs/translations-joomla15/downloads/joomla15-ukrainian
 RewriteRule ^translations/joomla-1-5-translations.*$ https://downloads.joomla.org/language-packs/translations-joomla15 [L,R=301]
-#https://community.joomla.org/translations/joomla-1-5-translations/chinese-simplified-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/chinese-traditional-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/dari-afghanistan-translation-team.html
-#https://community.joomla.org/translations/joomla-1-5-translations/finnish-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/galician-translation-team.html
-#https://community.joomla.org/translations/joomla-1-5-translations/georgian-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/greek-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/gujarati-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/hindi-india-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/icelandic-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/italian-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/japanese-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/azeriazerbaijani-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/belarusian-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/bengali-bangladesh-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/lithuanian-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/malay-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/malayalam-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/montenegrin-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/dari-afghanistan-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/serbian-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/sindhi-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/sinhala-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/syriac-east-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/tagalog-philippines-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/tamil-sri-lanka-translation-community.html
-#https://community.joomla.org/translations/joomla-1-5-translations/urdu-translation.html
-#https://community.joomla.org/translations/joomla-1-5-translations/vietnamese-translation-community.html
+
+Redirect 301 /translations/joomla-2-5-translations.html https://downloads.joomla.org/language-packs/translations-joomla25
+Redirect 301 /translations/joomla-2-5-translations/afrikaans-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-afrikaans
+Redirect 301 /translations/joomla-2-5-translations/albanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-albanian
+Redirect 301 /translations/joomla-2-5-translations/arabic-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-arabic-unitag
+Redirect 301 /translations/joomla-2-5-translations/armenian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-armenian
+Redirect 301 /translations/joomla-2-5-translations/azeri-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-azeri
+Redirect 301 /translations/joomla-2-5-translations/basque-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-basque
+Redirect 301 /translations/joomla-2-5-translations/belarusian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-belarusian
+Redirect 301 /translations/joomla-2-5-translations/bengali-bangladesh-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-bengali
+Redirect 301 /translations/joomla-2-5-translations/bosnian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-bosnian
+Redirect 301 /translations/joomla-2-5-translations/bulgarian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-bulgarian
+Redirect 301 /translations/joomla-2-5-translations/catalan-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-catalan
+Redirect 301 /translations/joomla-2-5-translations/chinese-simplified-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-chinese-simplified
+Redirect 301 /translations/joomla-2-5-translations/chinese-traditional-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-chinese-traditional
+Redirect 301 /translations/joomla-2-5-translations/croatian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-croatian
+Redirect 301 /translations/joomla-2-5-translations/czech-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-czech
+Redirect 301 /translations/joomla-2-5-translations/danish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-danish
+Redirect 301 /translations/joomla-2-5-translations/dutch-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-dutch
+Redirect 301 /translations/joomla-2-5-translations/english-australia-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-english-australia
+Redirect 301 /translations/joomla-2-5-translations/english-usa-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-english-us
+Redirect 301 /translations/joomla-2-5-translations/esperanto-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-esperanto
+Redirect 301 /translations/joomla-2-5-translations/estonian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-estonian
+Redirect 301 /translations/joomla-2-5-translations/finnish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-finnish
+Redirect 301 /translations/joomla-2-5-translations/flemish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-flemish
+Redirect 301 /translations/joomla-2-5-translations/french-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-french
+Redirect 301 /translations/joomla-2-5-translations/galician-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-galician
+Redirect 301 /translations/joomla-2-5-translations/georgian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-georgian
+Redirect 301 /translations/joomla-2-5-translations/german-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-german
+Redirect 301 /translations/joomla-2-5-translations/greek-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-greek
+Redirect 301 /translations/joomla-2-5-translations/hebrew-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-hebrew
+Redirect 301 /translations/joomla-2-5-translations/hindi-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-hindi
+Redirect 301 /translations/joomla-2-5-translations/hungarian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-hungarian
+Redirect 301 /translations/joomla-2-5-translations/indonesian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-indonesian
+Redirect 301 /translations/joomla-2-5-translations/italian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-italian
+Redirect 301 /translations/joomla-2-5-translations/japanese-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-japanese
+Redirect 301 /translations/joomla-2-5-translations/khmer-cambodia-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-khmer
+Redirect 301 /translations/joomla-2-5-translations/korean-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-korean
+Redirect 301 /translations/joomla-2-5-translations/laotian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-laotian
+Redirect 301 /translations/joomla-2-5-translations/latvian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-latvian
+Redirect 301 /translations/joomla-2-5-translations/lithuanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-lithuanian
+Redirect 301 /translations/joomla-2-5-translations/macedonian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-macedonian
+Redirect 301 /translations/joomla-2-5-translations/norwegian-nynorsk-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-norwegian-nynorsk
+Redirect 301 /translations/joomla-2-5-translations/persian-farsi-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-persian-farsi
+Redirect 301 /translations/joomla-2-5-translations/polish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-polish
+Redirect 301 /translations/joomla-2-5-translations/portuguese-brazil-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-portuguese-brazil
+Redirect 301 /translations/joomla-2-5-translations/portuguese-portugal-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-portuguese-portugal
+Redirect 301 /translations/joomla-2-5-translations/romanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-romanian
+Redirect 301 /translations/joomla-2-5-translations/russian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-russian
+Redirect 301 /translations/joomla-2-5-translations/scottish-gaelic-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-scottish-gaelic
+Redirect 301 /translations/joomla-2-5-translations/serbian-cyrillic-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-serbian-cyrillic
+Redirect 301 /translations/joomla-2-5-translations/serbian-latin-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-serbian-latin
+Redirect 301 /translations/joomla-2-5-translations/slovak-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-slovak
+Redirect 301 /translations/joomla-2-5-translations/spanish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-spanish
+Redirect 301 /translations/joomla-2-5-translations/swahili-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-swahili
+Redirect 301 /translations/joomla-2-5-translations/swedish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-swedish
+Redirect 301 /translations/joomla-2-5-translations/syriac-east-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-syriac-east
+Redirect 301 /translations/joomla-2-5-translations/tamil-india-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-tamil-india
+Redirect 301 /translations/joomla-2-5-translations/thai-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-thai
+Redirect 301 /translations/joomla-2-5-translations/turkish-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-turkish
+Redirect 301 /translations/joomla-2-5-translations/ukrainian-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-ukrainian
+Redirect 301 /translations/joomla-2-5-translations/uyghur-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-uyghur
+Redirect 301 /translations/joomla-2-5-translations/vietnamese-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-vietnamese
+Redirect 301 /translations/joomla-2-5-translations/welsh-translation.html https://downloads.joomla.org/language-packs/translations-joomla25/downloads/joomla25-welsh
+RewriteRule ^translations/joomla-2-5-translations.*$ https://downloads.joomla.org/language-packs/translations-joomla25 [L,R=301]
+Redirect 301 /translations.html https://downloads.joomla.org/language-packs
+
+Redirect 301 /translations/joomla-3-translations.html https://downloads.joomla.org/language-packs/translations-joomla3
+Redirect 301 /translations/joomla-3-translations/afrikaans-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-afrikaans
+Redirect 301 /translations/joomla-3-translations/albanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-albanian
+Redirect 301 /translations/joomla-3-translations/arabic-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-arabic-unitag
+Redirect 301 /translations/joomla-3-translations/armenian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-armenian
+Redirect 301 /translations/joomla-3-translations/basque-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-basque
+Redirect 301 /translations/joomla-3-translations/belarusian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-belarusian
+Redirect 301 /translations/joomla-3-translations/bengali-bangladesh-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-bengali-bangladesh
+Redirect 301 /translations/joomla-3-translations/bosnian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-bosnian
+Redirect 301 /translations/joomla-3-translations/bulgarian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-bulgarian
+Redirect 301 /translations/joomla-3-translations/catalan-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-catalan
+Redirect 301 /translations/joomla-3-translations/chinese-simplified-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-chinese-simplified
+Redirect 301 /translations/joomla-3-translations/chinese-traditional-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-chinese-traditional
+Redirect 301 /translations/joomla-3-translations/croatian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-croatian
+Redirect 301 /translations/joomla-3-translations/czech-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-czech
+Redirect 301 /translations/joomla-3-translations/danish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-danish
+Redirect 301 /translations/joomla-3-translations/dari-persian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-dari
+Redirect 301 /translations/joomla-3-translations/dutch-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-dutch
+Redirect 301 /translations/joomla-3-translations/dzongkha-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-dzongkha
+Redirect 301 /translations/joomla-3-translations/english-australia-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-english-australia
+Redirect 301 /translations/joomla-3-translations/english-canada-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-english-canada
+Redirect 301 /translations/joomla-3-translations/english-usa-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-english-us
+Redirect 301 /translations/joomla-3-translations/esperanto-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-esperanto
+Redirect 301 /translations/joomla-3-translations/estonian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-estonian
+Redirect 301 /translations/joomla-3-translations/finnish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-finnish
+Redirect 301 /translations/joomla-3-translations/flemish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-flemish
+Redirect 301 /translations/joomla-3-translations/french-canada-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-french-canada
+Redirect 301 /translations/joomla-3-translations/french-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-french
+Redirect 301 /translations/joomla-3-translations/galician-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-galician
+Redirect 301 /translations/joomla-3-translations/georgian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-georgian
+Redirect 301 /translations/joomla-3-translations/german-austria-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-german-austria
+Redirect 301 /translations/joomla-3-translations/german-liechtenstein-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-german-liechtenstein
+Redirect 301 /translations/joomla-3-translations/german-luxembourg-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-german-luxembourg
+Redirect 301 /translations/joomla-3-translations/german-switzerland-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-german-switzerland
+Redirect 301 /translations/joomla-3-translations/german-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-german
+Redirect 301 /translations/joomla-3-translations/greek-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-greek
+Redirect 301 /translations/joomla-3-translations/hebrew-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-hebrew
+Redirect 301 /translations/joomla-3-translations/hindi-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-hindi
+Redirect 301 /translations/joomla-3-translations/hungarian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-hungarian
+Redirect 301 /translations/joomla-3-translations/indonesian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-indonesian
+Redirect 301 /translations/joomla-3-translations/irish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-irish
+Redirect 301 /translations/joomla-3-translations/italian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-italian
+Redirect 301 /translations/joomla-3-translations/japanese-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-japanese
+Redirect 301 /translations/joomla-3-translations/kazakh-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-kazakh
+Redirect 301 /translations/joomla-3-translations/khmer-cambodia-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-khmer
+Redirect 301 /translations/joomla-3-translations/korean-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-korean
+Redirect 301 /translations/joomla-3-translations/latvian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-latvian
+Redirect 301 /translations/joomla-3-translations/lithuanian-translation-for-joomla-3-x.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-lithuanian
+Redirect 301 /translations/joomla-3-translations/macedonian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-macedonian
+Redirect 301 /translations/joomla-3-translations/malay-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-malay
+Redirect 301 /translations/joomla-3-translations/montenegrin-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-montenegrin
+Redirect 301 /translations/joomla-3-translations/norwegian-bokmal-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-norwegian-bokmal
+Redirect 301 /translations/joomla-3-translations/norwegian-nynorsk-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-norwegian-nynorsk
+Redirect 301 /translations/joomla-3-translations/persian-farsi-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-persian-farsi
+Redirect 301 /translations/joomla-3-translations/polish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-polish
+Redirect 301 /translations/joomla-3-translations/portuguese-brazil-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-portuguese-brazil
+Redirect 301 /translations/joomla-3-translations/portuguese-portugal-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-portuguese-portugal
+Redirect 301 /translations/joomla-3-translations/romanian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-romanian
+Redirect 301 /translations/joomla-3-translations/russian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-russian
+Redirect 301 /translations/joomla-3-translations/serbian-cyrillic-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-serbian-cyrillic
+Redirect 301 /translations/joomla-3-translations/serbian-latin-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-serbian-latin
+Redirect 301 /translations/joomla-3-translations/sinhala-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-sinhala
+Redirect 301 /translations/joomla-3-translations/slovenian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-slovenian
+Redirect 301 /translations/joomla-3-translations/slovak-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-slovak
+Redirect 301 /translations/joomla-3-translations/spanish-colombia-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-spanish-colombia
+Redirect 301 /translations/joomla-3-translations/spanish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-spanish
+Redirect 301 /translations/joomla-3-translations/swahili-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-swahili
+Redirect 301 /translations/joomla-3-translations/swedish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-swedish
+Redirect 301 /translations/joomla-3-translations/syriac-east-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-syriac-east
+Redirect 301 /translations/joomla-3-translations/tamil-india-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-tamil-india
+Redirect 301 /translations/joomla-3-translations/thai-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-thai
+Redirect 301 /translations/joomla-3-translations/turkish-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-turkish
+Redirect 301 /translations/joomla-3-translations/turkmen-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-turkmen
+Redirect 301 /translations/joomla-3-translations/ukrainian-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-ukrainian
+Redirect 301 /translations/joomla-3-translations/uyghur-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-uyghur
+Redirect 301 /translations/joomla-3-translations/vietnamese-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-vietnamese
+Redirect 301 /translations/joomla-3-translations/welsh-translation.html https://downloads.joomla.org/language-packs/translations-joomla3/downloads/joomla3-welsh
+RewriteRule ^translations/joomla-3-translations.*$ https://downloads.joomla.org/language-packs/translations-joomla3 [L,R=302]
 
 # From com_redirect
 Redirect 301 /user-groups/935-joomla-user-group-vigo.html https://community.joomla.org/user-groups.html
@@ -755,3 +872,10 @@ RewriteCond %{REQUEST_URI} !^/index\.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
