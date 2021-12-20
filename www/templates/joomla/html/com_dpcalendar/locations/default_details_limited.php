@@ -17,10 +17,10 @@ defined('_JEXEC') or die();
 			<?php } ?>
 			<div class="dp-location-group__locations">
 				<?php foreach ($locations as $index => $location) { ?>
-					<?php
-						$description = '<a href="' . $this->router->getLocationRoute($location) . '">' . $location->title . '</a>';
-						$shorttitle = str_replace(['Joomla! User Group ', 'Joomla User Group ', 'Joomla! Users Group ', 'Joomla Users Group ', 'JUG '], '', $location->title);
-					?>
+					<?php 
+                  		$description = '<a href="' . $this->router->getLocationRoute($location) . '">' . $location->title . '</a>';
+                        $shorttitle = str_replace(['Joomla! User Group ', 'Joomla User Group ', 'Joomla! Users Group ', 'Joomla Users Group ', 'JUG '], '', $location->title); 
+                    ?>
 					<div class=dp-location" id="<?php echo 'dp-location-' . $location->id; ?>">
 						<h<?php echo $id ? 3 : 2; ?> class="dp-heading">
 							<span class="dp-heading__icon" style="color: #<?php echo $location->color; ?>">
@@ -31,11 +31,11 @@ defined('_JEXEC') or die();
 							</a>
 						</h<?php echo $id ? 3 : 2; ?>>
 						<div class="dp-location__details"
-						     data-latitude="<?php echo $location->latitude; ?>"
-						     data-longitude="<?php echo $location->longitude; ?>"
-						     data-title="<?php echo $location->title; ?>"
-						     data-description="<?php echo $this->escape($description); ?>"
-						     data-color="<?php echo $location->color; ?>">
+							 data-latitude="<?php echo $location->latitude; ?>"
+							 data-longitude="<?php echo $location->longitude; ?>"
+							 data-title="<?php echo $location->title; ?>"
+							 data-description="<?php echo $this->escape($description); ?>"
+							 data-color="<?php echo $location->color; ?>">
 						</div>
 					</div>
 				<?php } ?>
