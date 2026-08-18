@@ -886,9 +886,6 @@ RewriteRule !^index.php$ - [F]
 </FilesMatch>
 ###########################################
 
-## Load Sentry Logger
-php_value auto_prepend_file /home/comm/public_html/cli/sentry-client.php
-
 ###########################################
 # ======= Joomla! core SEF Section. =======
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
